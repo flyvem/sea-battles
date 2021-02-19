@@ -1799,7 +1799,7 @@ function playBattle2() {
 
 
 function imgReplaceP100 (i, n, img, arr) {
-    if (arr[i + 100] === n) {
+    if (arr[i] === n) {
         elems[i + 100].src = img
     }
 }
@@ -5781,7 +5781,7 @@ function surrender() {
     const buttonRestart = document.getElementById('restart')
     buttonRestart.style.visibility = "visible"
     flagCoup = false;
-    imgReplaceFunc (imgReplaceP100, mPole)
+    imgReplaceFunc (imgReplaceP100, arrSeaComp)
 }
 
 

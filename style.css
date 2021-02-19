@@ -17,7 +17,6 @@ body {
     height: 160px;
     width: 493px;
     background: #efefef;
-    /*border: 3px solid #2270a3;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,8 +31,6 @@ body {
 .div4 {
     height: 155px;
     width: 340px;
-    /*background: #efefef;*/
-    /*border: 3px solid #2270a3;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -47,12 +44,9 @@ td {
     border: 1px solid #69c;
     width: 30px;
     height: 30px;
-    /*background: #efefef;*/
     margin-right: auto;
     margin-left: auto;
-    /*border-color: #6699cc;*/
     color: #039;
-    /*border-bottom: 1px dashed #69c;*/
 }
 
 th {
@@ -76,33 +70,27 @@ th {
 }
 
 .button {
-    /*border: 3px solid #2270a3;*/
     height: 65px;
     width: 520px;
     margin-left: auto;
     margin-right: auto;
 }
 .button2 {
-    /*border: 3px solid #2270a3;*/
     height: 65px;
     width: 520px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/*body {*/
-/*    !*background: #d6eaf8;*!*/
-/*}*/
 .gradient-button {
     text-decoration: none;
     display: inline-block;
     width: 100px;
     color: white;
     padding: 20px 30px;
-    /*margin: 10px 20px;*/
     border-radius: 10px;
     font-family: 'Akaya Kanadaka', cursive;
-    font-size: 20px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 2px;
     background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
@@ -122,11 +110,9 @@ th {
     width: 100px;
     color: white;
     padding: 20px 30px;
-    /*margin: 10px 20px;*/
     border-radius: 10px;
     font-family: 'Akaya Kanadaka', cursive;
-    /*font-family: 'Montserrat', sans-serif;*/
-    font-size: 20px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 2px;
     background-image: linear-gradient(to right, #9EEFE1 0%, #52ae41 51%, #9EEFE1 100%);
