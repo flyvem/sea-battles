@@ -1,7 +1,4 @@
 let elems = document.getElementsByTagName('img');
-const z1 = "img/z1.png";
-const z2 = "img/z2.png";
-const cross = "img/cross.png";
 let flagCoup = true;
 let flagFind = 0;
 let counterFind3 = 0;
@@ -13,30 +10,35 @@ let orz = 1
 let num
 let tmp
 let number
-let number01
-const z4_4 = "img/ship/z4_4.png";
-const z4_3 = "img/ship/z4_3.png";
-const z4_2 = "img/ship/z4_2.png";
-const z4_1 = "img/ship/z4_1.png";
-const z3_1 = "img/ship/z3_1.png";
-const z3_2 = "img/ship/z3_2.png";
-const z3_3 = "img/ship/z3_3.png";
-const z2_1 = "img/ship/z2_1.png";
-const z2_2 = "img/ship/z2_2.png";
-const z1_1 = "img/ship/z1_1.png";
-const z4_4c = "img/ship2/z4_4c.png";
-const z4_3c = "img/ship2/z4_3c.png";
-const z4_2c = "img/ship2/z4_2c.png";
-const z4_1c = "img/ship2/z4_1c.png";
-const z3_1c = "img/ship2/z3_1c.png";
-const z3_2c = "img/ship2/z3_2c.png";
-const z3_3c = "img/ship2/z3_3c.png";
-const z2_1c = "img/ship2/z2_1c.png";
-const z2_2c = "img/ship2/z2_2c.png";
-const z1_1c = "img/ship2/z1_1c.png";
-const zp = "img/zp.png";
-const zm = "img/zm2.png";
-const zf = "img/zf.png";
+const img = {
+    v1: "img/ship/z1_1.png",
+    v21: "img/ship/z2_1.png",
+    v22: "img/ship/z2_2.png",
+    v31: "img/ship/z3_1.png",
+    v32: "img/ship/z3_2.png",
+    v33: "img/ship/z3_3.png",
+    v41: "img/ship/z4_1.png",
+    v42: "img/ship/z4_2.png",
+    v43: "img/ship/z4_3.png",
+    v44: "img/ship/z4_4.png",
+    g1: "img/ship2/z1_1c.png",
+    g21: "img/ship2/z2_1c.png",
+    g22: "img/ship2/z2_2c.png",
+    g31: "img/ship2/z3_1c.png",
+    g32: "img/ship2/z3_2c.png",
+    g33: "img/ship2/z3_3c.png",
+    g41: "img/ship2/z4_1c.png",
+    g42: "img/ship2/z4_2c.png",
+    g43: "img/ship2/z4_3c.png",
+    g44: "img/ship2/z4_4c.png",
+    zp: "img/zp.png",
+    zm: "img/zm2.png",
+    zf: "img/zf.png",
+    z1: "img/z1.png",
+    z2: "img/z2.png",
+    cross: "img/cross.png"
+}
+
 
 let arrSea = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
     , [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
@@ -60,25 +62,25 @@ function over(daa) {
         if (counter === 0) {
             if (+arrSea[+daa.id - 1] === 0) {
                 if ((+daa.id - 1) < 70) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id + 9
                         , +daa.id + 19
                         , +daa.id + 29
                         , +daa.id - 1)
                 } else if ((+daa.id - 1) >= 70 && (+daa.id - 1) < 80) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 11
                         , +daa.id - 1
                         , +daa.id + 9
                         , +daa.id + 19)
                 } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 11
                         , +daa.id - 1
                         , +daa.id + 9
                         , +daa.id - 21)
                 } else {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 1
                         , +daa.id - 11
                         , +daa.id - 21
@@ -87,58 +89,58 @@ function over(daa) {
             }
         } else if (counter === 1 || counter === 2) {
             if ((+daa.id - 1) < 80) {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 1
                     , +daa.id + 9
                     , +daa.id + 19)
             } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 11
                     , +daa.id - 1
                     , +daa.id + 9)
             } else {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 21
                     , +daa.id - 11
                     , +daa.id - 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
             if ((+daa.id - 1) < 90) {
-                shipFuncIf2(z2
+                shipFuncIf2(img.z2
                     , +daa.id - 1
                     , +daa.id + 9)
             } else {
-                shipFuncIf2(z2
+                shipFuncIf2(img.z2
                     , +daa.id - 1
                     , +daa.id - 11)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
-            shipFuncIf1(z2
+            shipFuncIf1(img.z2
                 , +daa.id - 1)
         }
     } else {
         if (counter === 0) {
             if (+arrSea[+daa.id - 1] === 0) {
                 if ((+daa.id - 1) % 10 === 7) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id + 1)
                 } else if ((+daa.id - 1) % 10 === 8) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id - 3)
                 } else if ((+daa.id - 1) % 10 === 9) {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id - 4
                         , +daa.id - 3)
                 } else {
-                    shipFunc(z2
+                    shipFunc(img.z2
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id + 1
@@ -147,33 +149,33 @@ function over(daa) {
             }
         } else if (counter === 1 || counter === 2) {
             if ((+daa.id - 1) % 10 === 8) {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 2
                     , +daa.id
                     , +daa.id - 1)
             } else if ((+daa.id - 1) % 10 === 9) {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 3
                     , +daa.id - 2
                     , +daa.id - 1)
             } else {
-                shipFuncIf(z2
+                shipFuncIf(img.z2
                     , +daa.id - 1
                     , +daa.id
                     , +daa.id + 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
             if ((+daa.id - 1) % 10 === 9) {
-                shipFuncIf2(z2
+                shipFuncIf2(img.z2
                     , +daa.id - 1
                     , +daa.id - 2)
             } else {
-                shipFuncIf2(z2
+                shipFuncIf2(img.z2
                     , +daa.id - 1
                     , +daa.id)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
-            shipFuncIf1(z2
+            shipFuncIf1(img.z2
                 , +daa.id - 1)
         }
     }
@@ -184,25 +186,25 @@ function out(daa) {
         if (counter === 0) {
             if (+arrSea[+daa.id - 1] === 0) {
                 if ((+daa.id - 1) < 70) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id + 9
                         , +daa.id + 19
                         , +daa.id + 29
                         , +daa.id - 1)
                 } else if ((+daa.id - 1) >= 70 && (+daa.id - 1) < 80) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 11
                         , +daa.id - 1
                         , +daa.id + 9
                         , +daa.id + 19)
                 } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 11
                         , +daa.id - 1
                         , +daa.id + 9
                         , +daa.id - 21)
                 } else {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 1
                         , +daa.id - 11
                         , +daa.id - 21
@@ -211,58 +213,58 @@ function out(daa) {
             }
         } else if (counter === 1 || counter === 2) {
             if ((+daa.id - 1) < 80) {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 1
                     , +daa.id + 9
                     , +daa.id + 19)
             } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 11
                     , +daa.id - 1
                     , +daa.id + 9)
             } else {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 21
                     , +daa.id - 11
                     , +daa.id - 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
             if ((+daa.id - 1) < 90) {
-                shipFuncIf2(z1
+                shipFuncIf2(img.z1
                     , +daa.id - 1
                     , +daa.id + 9)
             } else {
-                shipFuncIf2(z1
+                shipFuncIf2(img.z1
                     , +daa.id - 1
                     , +daa.id - 11)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
-            shipFuncIf1(z1
+            shipFuncIf1(img.z1
                 , +daa.id - 1)
         }
     } else {
         if (counter === 0) {
             if (+arrSea[+daa.id - 1] === 0) {
                 if ((+daa.id - 1) % 10 === 7) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id + 1)
                 } else if ((+daa.id - 1) % 10 === 8) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id - 3)
                 } else if ((+daa.id - 1) % 10 === 9) {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 2
                         , +daa.id - 1
                         , +daa.id - 4
                         , +daa.id - 3)
                 } else {
-                    shipFunc(z1
+                    shipFunc(img.z1
                         , +daa.id - 1
                         , +daa.id
                         , +daa.id + 1
@@ -271,33 +273,33 @@ function out(daa) {
             }
         } else if (counter === 1 || counter === 2) {
             if ((+daa.id - 1) % 10 === 8) {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 2
                     , +daa.id
                     , +daa.id - 1)
             } else if ((+daa.id - 1) % 10 === 9) {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 3
                     , +daa.id - 2
                     , +daa.id - 1)
             } else {
-                shipFuncIf(z1
+                shipFuncIf(img.z1
                     , +daa.id - 1
                     , +daa.id
                     , +daa.id + 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
             if ((+daa.id - 1) % 10 === 9) {
-                shipFuncIf2(z1
+                shipFuncIf2(img.z1
                     , +daa.id - 1
                     , +daa.id - 2)
             } else {
-                shipFuncIf2(z1
+                shipFuncIf2(img.z1
                     , +daa.id - 1
                     , +daa.id)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
-            shipFuncIf1(z1
+            shipFuncIf1(img.z1
                 , +daa.id - 1)
         }
     }
@@ -329,19 +331,19 @@ function imgPosition4AutoStart(z, x, a, s, q, w, c, v) {
 function imgPosition4(z, x, c, v) {
 
     if (flagCoup === true) {
-        elems[z].src = z4_1
-        elems[x].src = z4_2
-        elems[c].src = z4_3
-        elems[v].src = z4_4
+        elems[z].src = img.v41
+        elems[x].src = img.v42
+        elems[c].src = img.v43
+        elems[v].src = img.v44
         arrSea[z] = 41
         arrSea[x] = 42
         arrSea[c] = 43
         arrSea[v] = 44
     } else {
-        elems[z].src = z4_1c
-        elems[x].src = z4_2c
-        elems[c].src = z4_3c
-        elems[v].src = z4_4c
+        elems[z].src = img.g41
+        elems[x].src = img.g42
+        elems[c].src = img.g43
+        elems[v].src = img.g44
         arrSea[z] = 414
         arrSea[x] = 424
         arrSea[c] = 434
@@ -352,16 +354,16 @@ function imgPosition4(z, x, c, v) {
 function imgPosition3(z, x, c) {
 
     if (flagCoup === true) {
-        elems[z].src = z3_1
-        elems[x].src = z3_2
-        elems[c].src = z3_3
+        elems[z].src = img.v31
+        elems[x].src = img.v32
+        elems[c].src = img.v33
         arrSea[z] = 31
         arrSea[x] = 32
         arrSea[c] = 33
     } else {
-        elems[z].src = z3_1c
-        elems[x].src = z3_2c
-        elems[c].src = z3_3c
+        elems[z].src = img.g31
+        elems[x].src = img.g32
+        elems[c].src = img.g33
         arrSea[z] = 313
         arrSea[x] = 323
         arrSea[c] = 333
@@ -371,13 +373,13 @@ function imgPosition3(z, x, c) {
 function imgPosition2(z, x) {
 
     if (flagCoup === true) {
-        elems[z].src = z2_1
-        elems[x].src = z2_2
+        elems[z].src = img.v21
+        elems[x].src = img.v22
         arrSea[z] = 21
         arrSea[x] = 22
     } else {
-        elems[z].src = z2_1c
-        elems[x].src = z2_2c
+        elems[z].src = img.g21
+        elems[x].src = img.g22
         arrSea[z] = 212
         arrSea[x] = 222
     }
@@ -386,10 +388,10 @@ function imgPosition2(z, x) {
 function imgPosition1(z) {
 
     if (flagCoup === true) {
-        elems[z].src = z1_1
+        elems[z].src = img.v1
         arrSea[z] = 11
     } else {
-        elems[z].src = z1_1c
+        elems[z].src = img.g1
         arrSea[z] = 111
     }
 
@@ -1514,7 +1516,7 @@ function installShip(daa) {
     if (counter === 0) {
         counter += 1
         installShip4(daa)
-        shipImg(zp)
+        shipImg(img.zp)
         imgShipTable4()
     } else if ((counter === 1 || counter === 2) && (+arrSea[+daa.id - 1] === 0)) {
         if (flagCoup === true) {
@@ -1522,21 +1524,21 @@ function installShip(daa) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id + 19] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             } else if ((+daa.id - 1) < 90) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id - 11] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0) && (+arrSea[+daa.id - 21] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             }
@@ -1545,28 +1547,28 @@ function installShip(daa) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             } else if ((+daa.id - 1) % 10 === 8) {
                 if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             } else if ((+daa.id - 1) % 10 === 9) {
                 if ((+arrSea[+daa.id - 3] === 0) && (+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
                     counter += 1
                     installShip3(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable3()
                 }
             }
@@ -1577,14 +1579,14 @@ function installShip(daa) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0)) {
                     counter += 1
                     installShip2(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable2()
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0)) {
                     counter += 1
                     installShip2(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable2()
                 }
             }
@@ -1593,14 +1595,14 @@ function installShip(daa) {
                 if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
                     counter += 1
                     installShip2(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable2()
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
                     counter += 1
                     installShip2(daa)
-                    shipImg(zp)
+                    shipImg(img.zp)
                     imgShipTable2()
                 }
             }
@@ -1609,12 +1611,12 @@ function installShip(daa) {
         if (flagCoup === true) {
             counter += 1
             installShip1(daa)
-            shipImg(zp)
+            shipImg(img.zp)
             imgShipTable1()
         } else {
             counter += 1
             installShip1(daa)
-            shipImg(zp)
+            shipImg(img.zp)
             imgShipTable1()
         }
 
@@ -1782,14 +1784,14 @@ function restartInstall() {
     counter = 0;
     counterComp = 0;
     for (let i = 0; i < 100; i++) {
-        elems[i].src = z1;
+        elems[i].src = img.z1;
         arrSea[i] = 0;
     }
 }
 
 function playBattle() {
     localStorage.setItem('myPole', JSON.stringify(arrSea))
-    shipImg(z1)
+    shipImg(img.z1)
 }
 
 function playBattle2() {
@@ -1812,31 +1814,31 @@ function imgReplace (i, n, img, arr) {
 
 function imgReplaceFunc (imgRep, arr){
     for (let i = 0; i < arr.length; i++) {
-        imgRep (i, 11, z1_1, arr)
-        imgRep (i, 111, z1_1c, arr)
-        imgRep (i, 21, z2_1, arr)
-        imgRep (i, 212, z2_1c, arr)
-        imgRep (i, 22, z2_2, arr)
-        imgRep (i, 222, z2_2c, arr)
-        imgRep (i, 31, z3_1, arr)
-        imgRep (i, 313, z3_1c, arr)
-        imgRep (i, 32, z3_2, arr)
-        imgRep (i, 323, z3_2c, arr)
-        imgRep (i, 33, z3_3, arr)
-        imgRep (i, 333, z3_3c, arr)
-        imgRep (i, 41, z4_1, arr)
-        imgRep (i, 414, z4_1c, arr)
-        imgRep (i, 42, z4_2, arr)
-        imgRep (i, 424, z4_2c, arr)
-        imgRep (i, 43, z4_3, arr)
-        imgRep (i, 434, z4_3c, arr)
-        imgRep (i, 44, z4_4, arr)
-        imgRep (i, 444, z4_4c, arr)
+        imgRep (i, 11, img.v1, arr)
+        imgRep (i, 111, img.g1, arr)
+        imgRep (i, 21, img.v21, arr)
+        imgRep (i, 212, img.g21, arr)
+        imgRep (i, 22, img.v22, arr)
+        imgRep (i, 222, img.g22, arr)
+        imgRep (i, 31, img.v31, arr)
+        imgRep (i, 313, img.g31, arr)
+        imgRep (i, 32, img.v32, arr)
+        imgRep (i, 323, img.g32, arr)
+        imgRep (i, 33,img.v33, arr)
+        imgRep (i, 333, img.g33, arr)
+        imgRep (i, 41, img.v41, arr)
+        imgRep (i, 414, img.g41, arr)
+        imgRep (i, 42, img.v42, arr)
+        imgRep (i, 424, img.g42, arr)
+        imgRep (i, 43, img.v43, arr)
+        imgRep (i, 434, img.g43, arr)
+        imgRep (i, 44, img.v44, arr)
+        imgRep (i, 444, img.g44, arr)
     }
 }
 
 function start() {
-    automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, altAdd1)
+    automation(arrSeaComp, imgPosition4Auto)
     const raw = localStorage.getItem('myPole')
     mPole = JSON.parse(raw)
     imgReplaceFunc (imgReplace, mPole)
@@ -1844,10 +1846,10 @@ function start() {
 
 function startAuto(field) {
     for (let i = 0; i < 100; i++) {
-        elems[i].src = z1;
+        elems[i].src = img.z1;
         arrSea[i] = 0;
     }
-    automation2(arrSea, imgPosition4AutoStart, altAdd4c, altAdd3c, altAdd2c, altAdd1c)
+    automation2(arrSea, imgPosition4AutoStart)
     const buttonPlay = document.getElementById('game')
     buttonPlay.style.visibility = "visible"
     const imgGrey_101 = document.getElementById('101')
@@ -1876,45 +1878,45 @@ function startAuto(field) {
     counter = 10
     for (let i = 0; i < field.length; i++) {
         if (field[i] === 11) {
-            elems[i].src = z1_1
+            elems[i].src = img.v1
         } else if (field[i] === 111) {
-            elems[i].src = z1_1c
+            elems[i].src = img.g1
         } else if (field[i] === 21) {
-            elems[i].src = z2_1
+            elems[i].src = img.v21
         } else if (field[i] === 212) {
-            elems[i].src = z2_1c
+            elems[i].src = img.g21
         } else if (field[i] === 22) {
-            elems[i].src = z2_2
+            elems[i].src = img.v22
         } else if (field[i] === 222) {
-            elems[i].src = z2_2c
+            elems[i].src = img.g22
         } else if (field[i] === 31) {
-            elems[i].src = z3_1
+            elems[i].src = img.v31
         } else if (field[i] === 313) {
-            elems[i].src = z3_1c
+            elems[i].src = img.g31
         } else if (field[i] === 32) {
-            elems[i].src = z3_2
+            elems[i].src = img.v32
         } else if (field[i] === 323) {
-            elems[i].src = z3_2c
+            elems[i].src = img.g32
         } else if (field[i] === 33) {
-            elems[i].src = z3_3
+            elems[i].src = img.v33
         } else if (field[i] === 333) {
-            elems[i].src = z3_3c
+            elems[i].src = img.g33
         } else if (field[i] === 41) {
-            elems[i].src = z4_1
+            elems[i].src = img.v41
         } else if (field[i] === 414) {
-            elems[i].src = z4_1c
+            elems[i].src = img.g41
         } else if (field[i] === 42) {
-            elems[i].src = z4_2
+            elems[i].src = img.v42
         } else if (field[i] === 424) {
-            elems[i].src = z4_2c
+            elems[i].src = img.g42
         } else if (field[i] === 43) {
-            elems[i].src = z4_3
+            elems[i].src = img.v43
         } else if (field[i] === 434) {
-            elems[i].src = z4_3c
+            elems[i].src = img.g43
         } else if (field[i] === 44) {
-            elems[i].src = z4_4
+            elems[i].src = img.v44
         } else if (field[i] === 444) {
-            elems[i].src = z4_4c
+            elems[i].src = img.g44
         }
     }
 }
@@ -1923,61 +1925,16 @@ function menu() {
     localStorage.clear()
 }
 
-function altAdd4(alt, z, x, c, v) {
-    elems[z + 100].alt = alt
-    elems[x + 100].alt = alt
-    elems[c + 100].alt = alt
-    elems[v + 100].alt = alt
-}
-
-function altAdd3(alt, z, x, c) {
-    elems[z + 100].alt = alt
-    elems[x + 100].alt = alt
-    elems[c + 100].alt = alt
-}
-
-function altAdd2(alt, z, x) {
-    elems[z + 100].alt = alt
-    elems[x + 100].alt = alt
-}
-
-function altAdd1(alt, z) {
-    elems[z + 100].alt = alt
-}
-
-function altAdd4c(alt, z, x, c, v) {
-    elems[z].alt = alt
-    elems[x].alt = alt
-    elems[c].alt = alt
-    elems[v].alt = alt
-}
-
-function altAdd3c(alt, z, x, c) {
-    elems[z].alt = alt
-    elems[x].alt = alt
-    elems[c].alt = alt
-}
-
-function altAdd2c(alt, z, x) {
-    elems[z].alt = alt
-    elems[x].alt = alt
-}
-
-function altAdd1c(alt, z) {
-    elems[z].alt = alt
-}
-
-function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, altAdd1) {
+function automation(arrSeaComp, imgPosition4Auto) {
     while (counterComp < 10) {
-        number01 = randomInt(0, 2)
-        if (number01 === 1) {
+        number = randomInt(0, 2)
+        if (number === 1) {
             if (counterComp === 0) {
                 number = randomInt(0, 60)
                 if ((+arrSeaComp[+number] === 0) && (+arrSeaComp[+number + 10] === 0) && (+arrSeaComp[+number + 20] === 0) && (+arrSeaComp[+number + 30] === 0)) {
                     imgPosition4Auto(number, 41, number + 10, 42, number + 20, 43, number + 30, 44);
                     addTwo4(arrSeaComp)
                     counterComp += 1
-                    altAdd4(44, number, number + 10, number + 20, number + 30)
                 }
             } else if (counterComp === 1 || counterComp === 2) {
                 number = randomInt(0, 70)
@@ -1985,7 +1942,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 31, number + 10, 32, number + 20, 33);
                     addTwo3(arrSeaComp)
                     counterComp += 1
-                    altAdd3(33, number, number + 10, number + 20)
                 }
             } else if (counterComp === 3 || counterComp === 4 || counterComp === 5) {
                 number = randomInt(0, 80)
@@ -1993,7 +1949,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 21, number + 10, 22);
                     addTwo2(arrSeaComp)
                     counterComp += 1
-                    altAdd2(22, number, number + 10)
                 }
             } else if (counterComp === 6 || counterComp === 7 || counterComp === 8 || counterComp === 9) {
                 number = randomInt(0, 100)
@@ -2001,7 +1956,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 11);
                     addTwo1(arrSeaComp)
                     counterComp += 1
-                    altAdd1(11, number)
                 }
             }
         } else {
@@ -2011,7 +1965,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 414, number + 1, 424, number + 2, 434, number + 3, 444);
                     addTwo4c(arrSeaComp)
                     counterComp += 1
-                    altAdd4(44, number, number + 1, number + 2, number + 3)
                 }
             } else if (counterComp === 1 || counterComp === 2) {
                 number = numberTo(8)
@@ -2019,7 +1972,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 313, number + 1, 323, number + 2, 333);
                     addTwo3c(arrSeaComp)
                     counterComp += 1
-                    altAdd3(33, number, number + 1, number + 2)
                 }
             } else if (counterComp === 3 || counterComp === 4 || counterComp === 5) {
                 number = numberTo(9)
@@ -2027,7 +1979,6 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 212, number + 1, 222);
                     addTwo2c(arrSeaComp)
                     counterComp += 1
-                    altAdd2(22, number, number + 1)
                 }
             } else if (counterComp === 6 || counterComp === 7 || counterComp === 8 || counterComp === 9) {
                 number = numberTo(10)
@@ -2035,24 +1986,22 @@ function automation(arrSeaComp, imgPosition4Auto, altAdd4, altAdd3, altAdd2, alt
                     imgPosition4Auto(number, 111);
                     addTwo1c(arrSeaComp)
                     counterComp += 1
-                    altAdd1(11, number)
                 }
             }
         }
     }
 }
 
-function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c, altAdd1c) {
+function automation2(arrSeaComp, imgPosition4Auto) {
     while (counterComp < 10) {
-        number01 = randomInt(0, 2)
-        if (number01 === 1) {
+        number = randomInt(0, 2)
+        if (number === 1) {
             if (counterComp === 0) {
                 number = randomInt(0, 60)
                 if ((+arrSeaComp[+number] === 0) && (+arrSeaComp[+number + 10] === 0) && (+arrSeaComp[+number + 20] === 0) && (+arrSeaComp[+number + 30] === 0)) {
                     imgPosition4Auto(number, 41, number + 10, 42, number + 20, 43, number + 30, 44);
                     addTwo4(arrSeaComp)
                     counterComp += 1
-                    altAdd4c(44, number, number + 10, number + 20, number + 30)
                 }
             } else if (counterComp === 1 || counterComp === 2) {
                 number = randomInt(0, 70)
@@ -2060,7 +2009,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 31, number + 10, 32, number + 20, 33);
                     addTwo3(arrSeaComp)
                     counterComp += 1
-                    altAdd3c(33, number, number + 10, number + 20)
                 }
             } else if (counterComp === 3 || counterComp === 4 || counterComp === 5) {
                 number = randomInt(0, 80)
@@ -2068,7 +2016,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 21, number + 10, 22);
                     addTwo2(arrSeaComp)
                     counterComp += 1
-                    altAdd2c(22, number, number + 10)
                 }
             } else if (counterComp === 6 || counterComp === 7 || counterComp === 8 || counterComp === 9) {
                 number = randomInt(0, 100)
@@ -2076,7 +2023,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 11);
                     addTwo1(arrSeaComp)
                     counterComp += 1
-                    altAdd1c(11, number)
                 }
             }
         } else {
@@ -2086,7 +2032,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 414, number + 1, 424, number + 2, 434, number + 3, 444);
                     addTwo4c(arrSeaComp)
                     counterComp += 1
-                    altAdd4c(44, number, number + 1, number + 2, number + 3)
                 }
             } else if (counterComp === 1 || counterComp === 2) {
                 number = numberTo(8)
@@ -2094,7 +2039,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 313, number + 1, 323, number + 2, 333);
                     addTwo3c(arrSeaComp)
                     counterComp += 1
-                    altAdd3c(33, number, number + 1, number + 2)
                 }
             } else if (counterComp === 3 || counterComp === 4 || counterComp === 5) {
                 number = numberTo(9)
@@ -2102,7 +2046,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 212, number + 1, 222);
                     addTwo2c(arrSeaComp)
                     counterComp += 1
-                    altAdd2c(22, number, number + 1)
                 }
             } else if (counterComp === 6 || counterComp === 7 || counterComp === 8 || counterComp === 9) {
                 number = numberTo(10)
@@ -2110,7 +2053,6 @@ function automation2(arrSeaComp, imgPosition4Auto, altAdd4c, altAdd3c, altAdd2c,
                     imgPosition4Auto(number, 111);
                     addTwo1c(arrSeaComp)
                     counterComp += 1
-                    altAdd1c(11, number)
                 }
             }
         }
@@ -2728,9 +2670,8 @@ function addTwo1(arrSeaComp) {
 }
 
 function click(fire, a1) {
-    // if (counterI <= 10) end ();
     arrSeaComp[fire.id] = a1
-    fire.src = cross
+    fire.src = img.cross
     findBattle2My()
     findBattle3My()
     findBattle4My()
@@ -2741,11 +2682,11 @@ function fireShip(fire) {
     victory()
     let arrowImg = document.getElementById('1000')
     if (+flagFind === 0 && (counter < 10) && (counterI < 10) && (flagCoup === true)) {
-        if (arrSeaComp[fire.id] !== 5) {
+        if (+arrSeaComp[fire.id] !== 5) {
             arrowImg.src = "img/arrowRight.png"
             if ((+arrSeaComp[fire.id] === 11) || (+arrSeaComp[+fire.id] === 111)) {
                 arrSeaComp[fire.id] = 911
-                fire.src = zf
+                fire.src = img.zf
                 findBattle1My()
                 setTimeout(fireShip, 300, fire)
             } else if (+arrSeaComp[fire.id] === 21) {
@@ -2787,7 +2728,7 @@ function fireShip(fire) {
             } else if ((+arrSeaComp[+fire.id] === 0) || (+arrSeaComp[+fire.id] === 2)) {
                 arrSeaComp[fire.id] = 5
                 flagFind = +orz
-                fire.src = zm
+                fire.src = img.zm
                 arrowImg.src = "img/arrowLeft.png"
                 setTimeout(fireShip, 300, fire)
             }
@@ -2917,7 +2858,7 @@ function missed(n, fire, flag) {
     orz = flag
     let arrowImg = document.getElementById('1000')
     arrowImg.src = "img/arrowRight.png"
-    elems[+n].src = zm
+    elems[+n].src = img.zm
     mPole[+n] = 5
     arrBattle[+n] = 5
     setTimeout(fireShip, 500, fire)
@@ -2931,7 +2872,7 @@ function hit(n, fire, k) {
 
 function hit2(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    elems[+n].src = cross
+    elems[+n].src = img.cross
     setTimeout(fireShip, 500, fire)
 }
 
@@ -2946,7 +2887,7 @@ function hit2X(n1, n2, fire) {
 
 function hit3X(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    elems[n].src = cross
+    elems[n].src = img.cross
     counterFind3 += 1
     setTimeout(fireShip, 500, fire)
 }
@@ -2963,9 +2904,9 @@ function hit3XX(n1, n2, n3, fire, k) {
 }
 
 function hit4XX(n1, n2, n3, fire, k) {
-    elems[n1].src = cross
-    elems[n2].src = cross
-    elems[n3].src = cross
+    elems[n1].src = img.cross
+    elems[n2].src = img.cross
+    elems[n3].src = img.cross
 
     arrBattle[n1] = +mPole[n1] + k
     arrBattle[n2] = +mPole[n2] + k
@@ -4390,7 +4331,7 @@ function find4XXX(fire) {
 }
 
 function elArBaSea(cell) {
-    elems[cell].src = zm
+    elems[cell].src = img.zm
     arrSeaComp[cell - 100] = 5
 }
 
@@ -5058,7 +4999,7 @@ function findBattle4My() {
 }
 
 function elArBa(cell) {
-    elems[cell].src = zm
+    elems[cell].src = img.zm
     arrBattle[cell] = 5
 
 }
@@ -5578,7 +5519,8 @@ function findBattle3() {
     }
 }
 
-function findBattle4() {
+
+function findBattle4 () {
     for (let i = 0; i < arrBattle.length; i++) {
         if (+arrBattle[i] === 41 || +arrBattle[i] === 941) {
             if (i === 0) {
