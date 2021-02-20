@@ -450,7 +450,7 @@ function installShip4(daa) {
                     , +daa.id + 39
                     , +daa.id + 40)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 60)) {//////////////////////////////////////
+        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 60)) {
             if ((+daa.id - 1) % 10 === 0) {
                 imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
                 positionNumber(+daa.id - 11
@@ -1512,64 +1512,47 @@ function shipFuncIf1(y, z) {
     if ((+arrSea[z] === 0)) elems[z].src = y
 }
 
+function instShipN (daa, a, b){
+    counter += 1
+    a(daa)
+    shipImg(img.zp)
+    b()
+}
+
 function installShip(daa) {
     if (counter === 0) {
-        counter += 1
-        installShip4(daa)
-        shipImg(img.zp)
-        imgShipTable4()
+        instShipN (daa, installShip4, imgShipTable4)
     } else if ((counter === 1 || counter === 2) && (+arrSea[+daa.id - 1] === 0)) {
         if (flagCoup === true) {
             if ((+daa.id - 1) < 80) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id + 19] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             } else if ((+daa.id - 1) < 90) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id - 11] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0) && (+arrSea[+daa.id - 21] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             }
         } else {
             if ((+daa.id - 1) % 10 === 7) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             } else if ((+daa.id - 1) % 10 === 8) {
                 if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             } else if ((+daa.id - 1) % 10 === 9) {
                 if ((+arrSea[+daa.id - 3] === 0) && (+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
-                    counter += 1
-                    installShip3(daa)
-                    shipImg(img.zp)
-                    imgShipTable3()
+                    instShipN (daa, installShip3, imgShipTable3)
                 }
             }
         }
@@ -1577,47 +1560,29 @@ function installShip(daa) {
         if (flagCoup === true) {
             if ((+daa.id - 1) < 90) {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0)) {
-                    counter += 1
-                    installShip2(daa)
-                    shipImg(img.zp)
-                    imgShipTable2()
+                    instShipN (daa, installShip2, imgShipTable2)
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0)) {
-                    counter += 1
-                    installShip2(daa)
-                    shipImg(img.zp)
-                    imgShipTable2()
+                    instShipN (daa, installShip2, imgShipTable2)
                 }
             }
         } else {
             if ((+daa.id - 1) % 10 === 9) {
                 if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
-                    counter += 1
-                    installShip2(daa)
-                    shipImg(img.zp)
-                    imgShipTable2()
+                    instShipN (daa, installShip2, imgShipTable2)
                 }
             } else {
                 if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
-                    counter += 1
-                    installShip2(daa)
-                    shipImg(img.zp)
-                    imgShipTable2()
+                    instShipN (daa, installShip2, imgShipTable2)
                 }
             }
         }
     } else if ((counter === 6 || counter === 7 || counter === 8 || counter === 9) && (+arrSea[+daa.id - 1] === 0)) {
         if (flagCoup === true) {
-            counter += 1
-            installShip1(daa)
-            shipImg(img.zp)
-            imgShipTable1()
+            instShipN (daa, installShip1, imgShipTable1)
         } else {
-            counter += 1
-            installShip1(daa)
-            shipImg(img.zp)
-            imgShipTable1()
+            instShipN (daa, installShip1, imgShipTable1)
         }
 
     }
@@ -2678,6 +2643,11 @@ function click(fire, a1) {
     setTimeout(fireShip, 300, fire)
 }
 
+function hitFind (fire, number, hit, find, n){
+    hit(number, fire, n)
+    find(number, fire)
+}
+
 function fireShip(fire) {
     victory()
     let arrowImg = document.getElementById('1000')
@@ -2749,69 +2719,51 @@ function fireShip(fire) {
                         flagFind = 2
                         tmp = number
                         if (+mPole[number] === 21) {
-                            hit2(number, fire, 900)
-                            find2X(number, fire)
+                            hitFind (fire, number, hit2, find2X, 900)
                         } else if (+mPole[number] === 212) {
-                            hit2(number, fire, 9000)
-                            find2X(number, fire)
+                            hitFind (fire, number, hit2, find2X, 9000)
                         } else if (+mPole[number] === 22) {
-                            hit2(number, fire, 900)
-                            find2X(number, fire)
+                            hitFind (fire, number, hit2, find2X, 900)
                         } else if (+mPole[number] === 222) {
-                            hit2(number, fire, 9000)
-                            find2X(number, fire)
+                            hitFind (fire, number, hit2, find2X, 9000)
                         }
                     } else if ((+mPole[number] === 31) || (+mPole[number] === 32) || (+mPole[number] === 33)
                         || (+mPole[number] === 313) || (+mPole[number] === 323) || (+mPole[number] === 333)) {
                         flagFind = 3
                         tmp = number
                         if (+mPole[number] === 31) {
-                            hit3X(number, fire, 900)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 900)
                         } else if (+mPole[number] === 32) {
-                            hit3X(number, fire, 900)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 900)
                         } else if (+mPole[number] === 33) {
-                            hit3X(number, fire, 900)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 900)
                         } else if (+mPole[number] === 313) {
-                            hit3X(number, fire, 9000)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 9000)
                         } else if (+mPole[number] === 323) {
-                            hit3X(number, fire, 9000)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 9000)
                         } else if (+mPole[number] === 333) {
-                            hit3X(number, fire, 9000)
-                            find3X(number, fire)
+                            hitFind (fire, number, hit3X, find3X, 9000)
                         }
                     } else if ((mPole[number] === 41) || (mPole[number] === 42) || (mPole[number] === 43) || (mPole[number] === 44)
                         || (mPole[number] === 414) || (mPole[number] === 424) || (mPole[number] === 434) || (mPole[number] === 444)) {
                         flagFind = 4
                         tmp = number
                         if (+mPole[number] === 41) {
-                            hit3X(number, fire, 900)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 900)
                         } else if (+mPole[number] === 42) {
-                            hit3X(number, fire, 900)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 900)
                         } else if (+mPole[number] === 43) {
-                            hit3X(number, fire, 900)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 900)
                         } else if (+mPole[number] === 44) {
-                            hit3X(number, fire, 900)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 900)
                         } else if (+mPole[number] === 414) {
-                            hit3X(number, fire, 9000)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 9000)
                         } else if (+mPole[number] === 424) {
-                            hit3X(number, fire, 9000)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 9000)
                         } else if (+mPole[number] === 434) {
-                            hit3X(number, fire, 9000)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 9000)
                         } else if (+mPole[number] === 444) {
-                            hit3X(number, fire, 9000)
-                            find4X(number, fire)
+                            hitFind (fire, number, hit3X, find4X, 9000)
                         }
                     }else {
                         missed(number, fire, 1)
@@ -2819,15 +2771,15 @@ function fireShip(fire) {
             } else {
                 fireShip(fire)
             }
-        } else if (+flagFind === 2) { //поиск 2x
+        } else if (+flagFind === 2) {
             find2X(tmp, fire)
-        } else if ((+flagFind === 3) && (+flagFind !== 0)) {//поиск 3x
+        } else if ((+flagFind === 3) && (+flagFind !== 0)) {
             if ((counterFind3 < 2) && (+flagFind !== 0)) {
                 find3X(tmp, fire)
             } else if ((counterFind3 === 2) && (+flagFind !== 0)) {
                 find3XX(fire)
             }
-        } else if ((+flagFind === 4) && (+flagFind !== 0)) {//поиск 4x
+        } else if ((+flagFind === 4) && (+flagFind !== 0)) {
             if ((counterFind3 < 2) && (+flagFind !== 0)) {
                 find4X(tmp, fire)
             } else if ((counterFind3 === 2) && (+flagFind !== 0)) {
@@ -3036,323 +2988,117 @@ function ifFind2X(number, fire, n1, ifn, f) {
     }
 }
 
+function ifFind3X (number, fire, n1, if1, if2){
+    if (+arrBattle[n1] === 0) {
+        if (if1) {
+            hit3X(n1, fire, 900)
+        } else if (if2) {
+            hit3X(n1, fire, 9000)
+        } else {
+            missed(n1, fire, 3)
+        }
+    } else {
+        find3X(number, fire)
+    }
+}
+
+function ifFind4X (number, fire, n1, if1){
+    if (+arrBattle[n1] === 0) {
+        if (if1) {
+            hit3X(n1, fire)
+        } else {
+            missed(n1, fire, 4)
+        }
+    } else {
+        find4X(number, fire)
+    }
+}
+
 function find3X(number, fire) {
+    const n3m10 = ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33))
+    const n33m10 = ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333))
+    const n3m1 = ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33))
+    const n33m1 = ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333))
+    const n3p1 = ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33))
+    const n33p1 = ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333))
+    const n3p10 = ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33))
+    const n33p10 = ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333))
+
     if (flagFind !== 0) {
         if (+number === 0) {
             num = randomInt(1, 3)
             if (+num === 1) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             } else {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             }
         } else if (+number === 9) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
-
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             }
         } else if (+number === 90) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             }
         } else if (+number === 99) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             }
         } else if ((+number > 0) && (+number < 9)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             } else if (num === 2) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             }
         } else if ((+number > 90) && (+number < 99)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             } else if (num === 2) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             }
         } else if ((+number % 10 === 0) && (+number > 0) && (+number < 90)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             } else {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             }
         } else if ((+number % 10 === 9) && (+number > 9) && (+number < 99)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             }
         } else {
             num = randomInt(1, 5)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 31) || (mPole[number - 10] === 32) || (mPole[number - 10] === 33)) {
-                        hit3X(+number - 10, fire, 900)
-                    } else if ((mPole[number - 10] === 313) || (mPole[number - 10] === 323) || (mPole[number - 10] === 333)) {
-                        hit3X(+number - 10, fire, 9000)
-                    } else {
-                        missed(+number - 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 10, n3m10, n33m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 31) || (mPole[number + 1] === 32) || (mPole[number + 1] === 33)) {
-                        hit3X(+number + 1, fire, 900)
-                    } else if ((mPole[number + 1] === 313) || (mPole[number + 1] === 323) || (mPole[number + 1] === 333)) {
-                        hit3X(+number + 1, fire, 9000)
-                    } else {
-                        missed(+number + 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 1, n3p1, n33p1)
             } else if (num === 3) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 31) || (mPole[number + 10] === 32) || (mPole[number + 10] === 33)) {
-                        hit3X(+number + 10, fire, 900)
-                    } else if ((mPole[number + 10] === 313) || (mPole[number + 10] === 323) || (mPole[number + 10] === 333)) {
-                        hit3X(+number + 10, fire, 9000)
-                    } else {
-                        missed(+number + 10, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number + 10, n3p10, n33p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 31) || (mPole[number - 1] === 32) || (mPole[number - 1] === 33)) {
-                        hit3X(+number - 1, fire, 900)
-                    } else if ((mPole[number - 1] === 313) || (mPole[number - 1] === 323) || (mPole[number - 1] === 333)) {
-                        hit3X(+number - 1, fire, 9000)
-                    } else {
-                        missed(+number - 1, fire, 3)
-                    }
-                } else {
-                    find3X(number, fire)
-                }
+                ifFind3X (number, fire, number - 1, n3m1, n33m1)
             }
         }
     } else {
@@ -3546,305 +3292,94 @@ function find3XX(fire) {
 }
 
 function find4X(number, fire) {
+    const n4m10 = ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
+        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444))
+    const n4m1 = ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
+        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444))
+    const n4p1 = ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
+        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444))
+    const n4p10 = ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
+        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444))
     if (flagFind !== 0) {
         if (+number === 0) {
             num = randomInt(1, 3)
             if (+num === 1) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 1, n4p1)
             } else {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 10, n4p10)
             }
         } else if (+number === 9) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
-
+                ifFind4X (number, fire, number + 10, n4p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             }
         } else if (+number === 90) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
-
+                ifFind4X (number, fire, number + 1, n4p1)
             }
         } else if (+number === 99) {
             num = randomInt(1, 3)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             }
         } else if ((+number > 0) && (+number < 9)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 1, n4p1)
             } else if (num === 2) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 10, n4p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             }
         } else if ((+number > 90) && (+number < 99)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             } else if (num === 2) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 1, n4p1)
             }
         } else if ((+number % 10 === 0) && (+number > 0) && (+number < 90)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 1, n4p1)
             } else {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 10, n4p10)
             }
         } else if ((+number % 10 === 9) && (+number > 9) && (+number < 99)) {
             num = randomInt(1, 4)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 10, n4p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             }
         } else {
             num = randomInt(1, 5)
             if (num === 1) {
-                if (+arrBattle[number - 10] === 0) {
-                    if ((mPole[number - 10] === 41) || (mPole[number - 10] === 42) || (mPole[number - 10] === 43) || (mPole[number - 10] === 44)
-                        || (mPole[number - 10] === 414) || (mPole[number - 10] === 424) || (mPole[number - 10] === 434) || (mPole[number - 10] === 444)) {
-                        hit3X(+number - 10, fire)
-                    } else {
-                        missed(+number - 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 10, n4m10)
             } else if (num === 2) {
-                if (+arrBattle[number + 1] === 0) {
-                    if ((mPole[number + 1] === 41) || (mPole[number + 1] === 42) || (mPole[number + 1] === 43) || (mPole[number + 1] === 44)
-                        || (mPole[number + 1] === 414) || (mPole[number + 1] === 424) || (mPole[number + 1] === 434) || (mPole[number + 1] === 444)) {
-                        hit3X(+number + 1, fire)
-                    } else {
-                        missed(+number + 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 1, n4p1)
             } else if (num === 3) {
-                if (+arrBattle[number + 10] === 0) {
-                    if ((mPole[number + 10] === 41) || (mPole[number + 10] === 42) || (mPole[number + 10] === 43) || (mPole[number + 10] === 44)
-                        || (mPole[number + 10] === 414) || (mPole[number + 10] === 424) || (mPole[number + 10] === 434) || (mPole[number + 10] === 444)) {
-                        hit3X(+number + 10, fire)
-                    } else {
-                        missed(+number + 10, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number + 10, n4p10)
             } else {
-                if (+arrBattle[number - 1] === 0) {
-                    if ((mPole[number - 1] === 41) || (mPole[number - 1] === 42) || (mPole[number - 1] === 43) || (mPole[number - 1] === 44)
-                        || (mPole[number - 1] === 414) || (mPole[number - 1] === 424) || (mPole[number - 1] === 434) || (mPole[number - 1] === 444)) {
-                        hit3X(+number - 1, fire)
-                    } else {
-                        missed(+number - 1, fire, 4)
-                    }
-                } else {
-                    find4X(number, fire)
-                }
+                ifFind4X (number, fire, number - 1, n4m1)
             }
         }
     } else {
         fireShip(fire)
     }
-
 }
 
 function find4XX(fire) {
