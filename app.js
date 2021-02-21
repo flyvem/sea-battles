@@ -38,7 +38,28 @@ const img = {
     z2: "url('img/z2.png')",
     cross: "url('img/cross.png')"
 }
-
+const imgRed = {
+    v1: "url('img/ship/z1_1r.png')",
+    v21: "url('img/ship/z2_1r.png')",
+    v22: "url('img/ship/z2_2r.png')",
+    v31: "url('img/ship/z3_1r.png')",
+    v32: "url('img/ship/z3_2r.png')",
+    v33: "url('img/ship/z3_3r.png')",
+    v41: "url('img/ship/z4_1r.png')",
+    v42: "url('img/ship/z4_2r.png')",
+    v43: "url('img/ship/z4_3r.png')",
+    v44: "url('img/ship/z4_4r.png')",
+    g1: "url('img/ship2/z1_1cr.png')",
+    g21: "url('img/ship2/z2_1cr.png')",
+    g22: "url('img/ship2/z2_2cr.png')",
+    g31: "url('img/ship2/z3_1cr.png')",
+    g32: "url('img/ship2/z3_2cr.png')",
+    g33: "url('img/ship2/z3_3cr.png')",
+    g41: "url('img/ship2/z4_1cr.png')",
+    g42: "url('img/ship2/z4_2cr.png')",
+    g43: "url('img/ship2/z4_3cr.png')",
+    g44: "url('img/ship2/z4_4cr.png')",
+}
 
 let arrSea = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
     , [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
@@ -1777,28 +1798,28 @@ function imgReplace (i, n, img, arr) {
     }
 }
 
-function imgReplaceFunc (imgRep, arr){
+function imgReplaceFunc (imgRep, arr, way){
     for (let i = 0; i < arr.length; i++) {
-        imgRep (i, 11, img.v1, arr)
-        imgRep (i, 111, img.g1, arr)
-        imgRep (i, 21, img.v21, arr)
-        imgRep (i, 212, img.g21, arr)
-        imgRep (i, 22, img.v22, arr)
-        imgRep (i, 222, img.g22, arr)
-        imgRep (i, 31, img.v31, arr)
-        imgRep (i, 313, img.g31, arr)
-        imgRep (i, 32, img.v32, arr)
-        imgRep (i, 323, img.g32, arr)
-        imgRep (i, 33,img.v33, arr)
-        imgRep (i, 333, img.g33, arr)
-        imgRep (i, 41, img.v41, arr)
-        imgRep (i, 414, img.g41, arr)
-        imgRep (i, 42, img.v42, arr)
-        imgRep (i, 424, img.g42, arr)
-        imgRep (i, 43, img.v43, arr)
-        imgRep (i, 434, img.g43, arr)
-        imgRep (i, 44, img.v44, arr)
-        imgRep (i, 444, img.g44, arr)
+        imgRep (i, 11, way.v1, arr)
+        imgRep (i, 111, way.g1, arr)
+        imgRep (i, 21, way.v21, arr)
+        imgRep (i, 212, way.g21, arr)
+        imgRep (i, 22, way.v22, arr)
+        imgRep (i, 222, way.g22, arr)
+        imgRep (i, 31, way.v31, arr)
+        imgRep (i, 313, way.g31, arr)
+        imgRep (i, 32, way.v32, arr)
+        imgRep (i, 323, way.g32, arr)
+        imgRep (i, 33,way.v33, arr)
+        imgRep (i, 333, way.g33, arr)
+        imgRep (i, 41, way.v41, arr)
+        imgRep (i, 414, way.g41, arr)
+        imgRep (i, 42, way.v42, arr)
+        imgRep (i, 424, way.g42, arr)
+        imgRep (i, 43, way.v43, arr)
+        imgRep (i, 434, way.g43, arr)
+        imgRep (i, 44, way.v44, arr)
+        imgRep (i, 444, way.g44, arr)
     }
 }
 
@@ -1806,7 +1827,7 @@ function start() {
     automation(arrSeaComp, imgPosition4Auto)
     const raw = localStorage.getItem('myPole')
     mPole = JSON.parse(raw)
-    imgReplaceFunc (imgReplace, mPole)
+    imgReplaceFunc (imgReplace, mPole, img)
 }
 
 function startAuto(field) {
@@ -5260,7 +5281,7 @@ function surrender() {
     const buttonRestart = document.getElementById('restart')
     buttonRestart.style.visibility = "visible"
     flagCoup = false;
-    imgReplaceFunc (imgReplaceP100, arrSeaComp)
+    imgReplaceFunc (imgReplaceP100, arrSeaComp, imgRed)
 }
 
 
@@ -5269,5 +5290,5 @@ function playRestart() {
     flagCoup = true;
     const raw = localStorage.getItem('myPole2')
     const mPole2 = JSON.parse(raw)
-    imgReplaceFunc (imgReplace, mPole2)
+    imgReplaceFunc (imgReplace, mPole2, img)
 }
