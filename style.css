@@ -6,8 +6,8 @@ body {
 
 }
 .div1 {
-    height: 380px;
-    width: 380px;
+    height: 350px;
+    width: 350px;
     border: 3px solid #2270a3;
     background: #efefef;
     margin-left: auto;
@@ -21,11 +21,10 @@ body {
     margin-right: auto;
 }
 .div3 {
-    height: 380px;
-    width: 820px;
+    height: 350px;
+    width: 710px;
     background: #efefef;
-    border: 3px solid #8a50e8;
-    margin-left: auto;
+    border: 3px solid #2270a3;
     margin-right: auto;
 }
 .div4 {
@@ -42,16 +41,16 @@ table {
 
 td {
     border: 1px solid #69c;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     margin-right: auto;
     margin-left: auto;
     color: #039;
 }
 
 th {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
 .floatedTable {
     float:left;

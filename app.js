@@ -1,4 +1,4 @@
-let element = document.getElementsByTagName('img');
+let element = document.getElementsByTagName('td');
 let flagCoup = true;
 let flagFind = 0;
 let counterFind3 = 0;
@@ -11,32 +11,32 @@ let num
 let tmp
 let number
 const img = {
-    v1: "img/ship/z1_1.png",
-    v21: "img/ship/z2_1.png",
-    v22: "img/ship/z2_2.png",
-    v31: "img/ship/z3_1.png",
-    v32: "img/ship/z3_2.png",
-    v33: "img/ship/z3_3.png",
-    v41: "img/ship/z4_1.png",
-    v42: "img/ship/z4_2.png",
-    v43: "img/ship/z4_3.png",
-    v44: "img/ship/z4_4.png",
-    g1: "img/ship2/z1_1c.png",
-    g21: "img/ship2/z2_1c.png",
-    g22: "img/ship2/z2_2c.png",
-    g31: "img/ship2/z3_1c.png",
-    g32: "img/ship2/z3_2c.png",
-    g33: "img/ship2/z3_3c.png",
-    g41: "img/ship2/z4_1c.png",
-    g42: "img/ship2/z4_2c.png",
-    g43: "img/ship2/z4_3c.png",
-    g44: "img/ship2/z4_4c.png",
-    zp: "img/zp.png",
-    zm: "img/zm2.png",
-    zf: "img/zf.png",
-    z1: "img/z1.png",
-    z2: "img/z2.png",
-    cross: "img/cross.png"
+    v1: "url('img/ship/z1_1.png')",
+    v21: "url('img/ship/z2_1.png')",
+    v22: "url('img/ship/z2_2.png')",
+    v31: "url('img/ship/z3_1.png')",
+    v32: "url('img/ship/z3_2.png')",
+    v33: "url('img/ship/z3_3.png')",
+    v41: "url('img/ship/z4_1.png')",
+    v42: "url('img/ship/z4_2.png')",
+    v43: "url('img/ship/z4_3.png')",
+    v44: "url('img/ship/z4_4.png')",
+    g1: "url('img/ship2/z1_1c.png')",
+    g21: "url('img/ship2/z2_1c.png')",
+    g22: "url('img/ship2/z2_2c.png')",
+    g31: "url('img/ship2/z3_1c.png')",
+    g32: "url('img/ship2/z3_2c.png')",
+    g33: "url('img/ship2/z3_3c.png')",
+    g41: "url('img/ship2/z4_1c.png')",
+    g42: "url('img/ship2/z4_2c.png')",
+    g43: "url('img/ship2/z4_3c.png')",
+    g44: "url('img/ship2/z4_4c.png')",
+    zp: "url('img/zp.png')",
+    zm: "url('img/zm2.png')",
+    zf: "url('img/zf.png')",
+    z1: "url('img/z1.png')",
+    z2: "url('img/z2.png')",
+    cross: "url('img/cross.png')"
 }
 
 
@@ -309,7 +309,7 @@ function out(item) {
 function shipImg(img) {
     for (let i = 0; i < arrSea.length; i++) {
         if (+arrSea[i] === 2) {
-            element[i].src = img
+            element[i].style.backgroundImage = img
         }
     }
 }
@@ -331,19 +331,19 @@ function imgPosition4AutoStart(z, x, a, s, q, w, c, v) {
 function imgPosition4(z, x, c, v) {
 
     if (flagCoup === true) {
-        element[z].src = img.v41
-        element[x].src = img.v42
-        element[c].src = img.v43
-        element[v].src = img.v44
+        element[z].style.backgroundImage = img.v41
+        element[x].style.backgroundImage = img.v42
+        element[c].style.backgroundImage = img.v43
+        element[v].style.backgroundImage = img.v44
         arrSea[z] = 41
         arrSea[x] = 42
         arrSea[c] = 43
         arrSea[v] = 44
     } else {
-        element[z].src = img.g41
-        element[x].src = img.g42
-        element[c].src = img.g43
-        element[v].src = img.g44
+        element[z].style.backgroundImage = img.g41
+        element[x].style.backgroundImage = img.g42
+        element[c].style.backgroundImage = img.g43
+        element[v].style.backgroundImage = img.g44
         arrSea[z] = 414
         arrSea[x] = 424
         arrSea[c] = 434
@@ -354,16 +354,16 @@ function imgPosition4(z, x, c, v) {
 function imgPosition3(z, x, c) {
 
     if (flagCoup === true) {
-        element[z].src = img.v31
-        element[x].src = img.v32
-        element[c].src = img.v33
+        element[z].style.backgroundImage = img.v31
+        element[x].style.backgroundImage = img.v32
+        element[c].style.backgroundImage = img.v33
         arrSea[z] = 31
         arrSea[x] = 32
         arrSea[c] = 33
     } else {
-        element[z].src = img.g31
-        element[x].src = img.g32
-        element[c].src = img.g33
+        element[z].style.backgroundImage = img.g31
+        element[x].style.backgroundImage = img.g32
+        element[c].style.backgroundImage = img.g33
         arrSea[z] = 313
         arrSea[x] = 323
         arrSea[c] = 333
@@ -373,13 +373,13 @@ function imgPosition3(z, x, c) {
 function imgPosition2(z, x) {
 
     if (flagCoup === true) {
-        element[z].src = img.v21
-        element[x].src = img.v22
+        element[z].style.backgroundImage = img.v21
+        element[x].style.backgroundImage = img.v22
         arrSea[z] = 21
         arrSea[x] = 22
     } else {
-        element[z].src = img.g21
-        element[x].src = img.g22
+        element[z].style.backgroundImage = img.g21
+        element[x].style.backgroundImage = img.g22
         arrSea[z] = 212
         arrSea[x] = 222
     }
@@ -388,10 +388,10 @@ function imgPosition2(z, x) {
 function imgPosition1(z) {
 
     if (flagCoup === true) {
-        element[z].src = img.v1
+        element[z].style.backgroundImage = img.v1
         arrSea[z] = 11
     } else {
-        element[z].src = img.g1
+        element[z].style.backgroundImage = img.g1
         arrSea[z] = 111
     }
 
@@ -1487,29 +1487,29 @@ function installShip1(item) {
 }
 
 function shipFunc(y, z, x, c, v) {
-    element[z].src = y
-    element[x].src = y
-    element[c].src = y
-    element[v].src = y
+    element[z].style.backgroundImage = y
+    element[x].style.backgroundImage = y
+    element[c].style.backgroundImage = y
+    element[v].style.backgroundImage = y
 }
 
 function shipFuncIf(y, z, x, c) {
     if ((+arrSea[z] === 0) && (+arrSea[x] === 0) && (+arrSea[c] === 0)) {
-        element[z].src = y
-        element[x].src = y
-        element[c].src = y
+        element[z].style.backgroundImage = y
+        element[x].style.backgroundImage = y
+        element[c].style.backgroundImage = y
     }
 }
 
 function shipFuncIf2(y, z, x) {
     if ((+arrSea[z] === 0) && (+arrSea[x] === 0)) {
-        element[z].src = y
-        element[x].src = y
+        element[z].style.backgroundImage = y
+        element[x].style.backgroundImage = y
     }
 }
 
 function shipFuncIf1(y, z) {
-    if ((+arrSea[z] === 0)) element[z].src = y
+    if ((+arrSea[z] === 0)) element[z].style.backgroundImage = y
 }
 
 function instShipN (item, a, b){
@@ -1749,7 +1749,7 @@ function restartInstall() {
     counter = 0;
     counterComp = 0;
     for (let i = 0; i < 100; i++) {
-        element[i].src = img.z1;
+        element[i].style.backgroundImage = img.z1;
         arrSea[i] = 0;
     }
 }
@@ -1767,13 +1767,13 @@ function playBattle2() {
 
 function imgReplaceP100 (i, n, img, arr) {
     if (arr[i] === n) {
-        element[i + 100].src = img
+        element[i + 100].style.backgroundImage = img
     }
 }
 
 function imgReplace (i, n, img, arr) {
     if (arr[i] === n) {
-        element[i].src = img
+        element[i].style.backgroundImage = img
     }
 }
 
@@ -1811,7 +1811,7 @@ function start() {
 
 function startAuto(field) {
     for (let i = 0; i < 100; i++) {
-        element[i].src = img.z1;
+        element[i].style.backgroundImage = img.z1;
         arrSea[i] = 0;
     }
     automation2(arrSea, imgPosition4AutoStart)
@@ -1843,45 +1843,45 @@ function startAuto(field) {
     counter = 10
     for (let i = 0; i < field.length; i++) {
         if (field[i] === 11) {
-            element[i].src = img.v1
+            element[i].style.backgroundImage = img.v1
         } else if (field[i] === 111) {
-            element[i].src = img.g1
+            element[i].style.backgroundImage = img.g1
         } else if (field[i] === 21) {
-            element[i].src = img.v21
+            element[i].style.backgroundImage = img.v21
         } else if (field[i] === 212) {
-            element[i].src = img.g21
+            element[i].style.backgroundImage = img.g21
         } else if (field[i] === 22) {
-            element[i].src = img.v22
+            element[i].style.backgroundImage = img.v22
         } else if (field[i] === 222) {
-            element[i].src = img.g22
+            element[i].style.backgroundImage = img.g22
         } else if (field[i] === 31) {
-            element[i].src = img.v31
+            element[i].style.backgroundImage = img.v31
         } else if (field[i] === 313) {
-            element[i].src = img.g31
+            element[i].style.backgroundImage = img.g31
         } else if (field[i] === 32) {
-            element[i].src = img.v32
+            element[i].style.backgroundImage = img.v32
         } else if (field[i] === 323) {
-            element[i].src = img.g32
+            element[i].style.backgroundImage = img.g32
         } else if (field[i] === 33) {
-            element[i].src = img.v33
+            element[i].style.backgroundImage = img.v33
         } else if (field[i] === 333) {
-            element[i].src = img.g33
+            element[i].style.backgroundImage = img.g33
         } else if (field[i] === 41) {
-            element[i].src = img.v41
+            element[i].style.backgroundImage = img.v41
         } else if (field[i] === 414) {
-            element[i].src = img.g41
+            element[i].style.backgroundImage = img.g41
         } else if (field[i] === 42) {
-            element[i].src = img.v42
+            element[i].style.backgroundImage = img.v42
         } else if (field[i] === 424) {
-            element[i].src = img.g42
+            element[i].style.backgroundImage = img.g42
         } else if (field[i] === 43) {
-            element[i].src = img.v43
+            element[i].style.backgroundImage = img.v43
         } else if (field[i] === 434) {
-            element[i].src = img.g43
+            element[i].style.backgroundImage = img.g43
         } else if (field[i] === 44) {
-            element[i].src = img.v44
+            element[i].style.backgroundImage = img.v44
         } else if (field[i] === 444) {
-            element[i].src = img.g44
+            element[i].style.backgroundImage = img.g44
         }
     }
 }
@@ -2636,7 +2636,7 @@ function addTwo1(arrSeaComp) {
 
 function click(fire, a1) {
     arrSeaComp[fire.id] = a1
-    fire.src = img.cross
+    fire.style.backgroundImage = img.cross
     findBattle2My()
     findBattle3My()
     findBattle4My()
@@ -2656,7 +2656,7 @@ function fireShip(fire) {
             arrowImg.src = "img/arrowRight.png"
             if ((+arrSeaComp[fire.id] === 11) || (+arrSeaComp[+fire.id] === 111)) {
                 arrSeaComp[fire.id] = 911
-                fire.src = img.zf
+                fire.style.backgroundImage = img.zf
                 findBattle1My()
                 setTimeout(fireShip, 300, fire)
             } else if (+arrSeaComp[fire.id] === 21) {
@@ -2698,7 +2698,7 @@ function fireShip(fire) {
             } else if ((+arrSeaComp[+fire.id] === 0) || (+arrSeaComp[+fire.id] === 2)) {
                 arrSeaComp[fire.id] = 5
                 flagFind = +orz
-                fire.src = img.zm
+                fire.style.backgroundImage = img.zm
                 arrowImg.src = "img/arrowLeft.png"
                 setTimeout(fireShip, 300, fire)
             }
@@ -2810,7 +2810,7 @@ function missed(n, fire, flag) {
     orz = flag
     let arrowImg = document.getElementById('1000')
     arrowImg.src = "img/arrowRight.png"
-    element[+n].src = img.zm
+    element[+n].style.backgroundImage = img.zm
     mPole[+n] = 5
     arrBattle[+n] = 5
     setTimeout(fireShip, 500, fire)
@@ -2824,7 +2824,7 @@ function hit(n, fire, k) {
 
 function hit2(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    element[+n].src = img.cross
+    element[+n].style.backgroundImage = img.cross
     setTimeout(fireShip, 500, fire)
 }
 
@@ -2839,7 +2839,7 @@ function hit2X(n1, n2, fire) {
 
 function hit3X(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    element[n].src = img.cross
+    element[n].style.backgroundImage = img.cross
     counterFind3 += 1
     setTimeout(fireShip, 500, fire)
 }
@@ -2856,9 +2856,9 @@ function hit3XX(n1, n2, n3, fire, k) {
 }
 
 function hit4XX(n1, n2, n3, fire, k) {
-    element[n1].src = img.cross
-    element[n2].src = img.cross
-    element[n3].src = img.cross
+    element[n1].style.backgroundImage = img.cross
+    element[n2].style.backgroundImage = img.cross
+    element[n3].style.backgroundImage = img.cross
 
     arrBattle[n1] = +mPole[n1] + k
     arrBattle[n2] = +mPole[n2] + k
@@ -3868,17 +3868,17 @@ function find4XXX(fire) {
 }
 
 function elArBaSea(cell) {
-    element[cell].src = img.zm
+    element[cell].style.backgroundImage = img.zm
     arrSeaComp[cell - 100] = 5
 }
 
 function BaSea1(i) {
     counterI += 1
     if (+arrSeaComp[i] === 911) {
-        element[i + 100].src = 'img/shipfire/z1_1f.gif'
+        element[i + 100].style.backgroundImage = "url('img/shipfire/z1_1f.gif')"
         arrSeaComp[i] = 5
     } else if (+arrSeaComp[i] === 9111) {
-        element[i + 100].src = 'img/ship2fire/z1_1cf.gif'
+        element[i + 100].style.backgroundImage = "url('img/ship2fire/z1_1cf.gif')"
         arrSeaComp[i] = 5
     }
 }
@@ -3886,13 +3886,13 @@ function BaSea1(i) {
 function BaSea2(i) {
     counterI += 1
     if (+arrSeaComp[i] === 921) {
-        element[i + 100].src = 'img/shipfire/z2_1f.gif'
-        element[i + 110].src = 'img/shipfire/z2_2f.gif'
+        element[i + 100].style.backgroundImage = "url('img/shipfire/z2_1f.gif')"
+        element[i + 110].style.backgroundImage = "url('img/shipfire/z2_2f.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
     } else if (+arrSeaComp[i] === 9212) {
-        element[i + 100].src = 'img/ship2fire/z2_1cf.gif'
-        element[i + 101].src = 'img/ship2fire/z2_2cf.gif'
+        element[i + 100].style.backgroundImage = "url('img/ship2fire/z2_1cf.gif')"
+        element[i + 101].style.backgroundImage = "url('img/ship2fire/z2_2cf.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
     }
@@ -3901,16 +3901,16 @@ function BaSea2(i) {
 function BaSea3(i) {
     counterI += 1
     if (+arrSeaComp[i] === 931) {
-        element[i + 100].src = 'img/shipfire/z3_1f.gif'
-        element[i + 110].src = 'img/shipfire/z3_2f.gif'
-        element[i + 120].src = 'img/shipfire/z3_3f.gif'
+        element[i + 100].style.backgroundImage = "url('img/shipfire/z3_1f.gif')"
+        element[i + 110].style.backgroundImage = "url('img/shipfire/z3_2f.gif')"
+        element[i + 120].style.backgroundImage = "url('img/shipfire/z3_3f.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
         arrSeaComp[i + 20] = 5
     } else if (+arrSeaComp[i] === 9313) {
-        element[i + 100].src = 'img/ship2fire/z3_1cf.gif'
-        element[i + 101].src = 'img/ship2fire/z3_2cf.gif'
-        element[i + 102].src = 'img/ship2fire/z3_3cf.gif'
+        element[i + 100].style.backgroundImage = "url('img/ship2fire/z3_1cf.gif')"
+        element[i + 101].style.backgroundImage = "url('img/ship2fire/z3_2cf.gif')"
+        element[i + 102].style.backgroundImage = "url('img/ship2fire/z3_3cf.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
         arrSeaComp[i + 2] = 5
@@ -3921,19 +3921,19 @@ function BaSea3(i) {
 function BaSea4(i) {
     counterI += 1
     if (+arrSeaComp[i] === 941) {
-        element[i + 100].src = 'img/shipfire/z4_1f.gif'
-        element[i + 110].src = 'img/shipfire/z4_2f.gif'
-        element[i + 120].src = 'img/shipfire/z4_3f.gif'
-        element[i + 130].src = 'img/shipfire/z4_4f.gif'
+        element[i + 100].style.backgroundImage = "url('img/shipfire/z4_1f.gif')"
+        element[i + 110].style.backgroundImage = "url('img/shipfire/z4_2f.gif')"
+        element[i + 120].style.backgroundImage = "url('img/shipfire/z4_3f.gif')"
+        element[i + 130].style.backgroundImage = "url('img/shipfire/z4_4f.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
         arrSeaComp[i + 20] = 5
         arrSeaComp[i + 30] = 5
     } else if (+arrSeaComp[i] === 9414) {
-        element[i + 100].src = 'img/ship2fire/z4_1cf.gif'
-        element[i + 101].src = 'img/ship2fire/z4_2cf.gif'
-        element[i + 102].src = 'img/ship2fire/z4_3cf.gif'
-        element[i + 103].src = 'img/ship2fire/z4_4cf.gif'
+        element[i + 100].style.backgroundImage = "url('img/ship2fire/z4_1cf.gif')"
+        element[i + 101].style.backgroundImage = "url('img/ship2fire/z4_2cf.gif')"
+        element[i + 102].style.backgroundImage = "url('img/ship2fire/z4_3cf.gif')"
+        element[i + 103].style.backgroundImage = "url('img/ship2fire/z4_4cf.gif')"
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
         arrSeaComp[i + 2] = 5
@@ -4536,30 +4536,30 @@ function findBattle4My() {
 }
 
 function elArBa(cell) {
-    element[cell].src = img.zm
+    element[cell].style.backgroundImage = img.zm
     arrBattle[cell] = 5
 
 }
 
 function BaSea1Comp(i) {
     if (+arrBattle[i] === 911) {
-        element[i].src = 'img/shipfire/z1_1f.gif'
+        element[i].style.backgroundImage = "url('img/shipfire/z1_1f.gif')"
         arrBattle[i] = 5
     } else if (+arrBattle[i] === 9111) {
-        element[i].src = 'img/ship2fire/z1_1cf.gif'
+        element[i].style.backgroundImage = "url('img/ship2fire/z1_1cf.gif')"
         arrBattle[i] = 5
     }
 }
 
 function BaSea2Comp(i) {
     if (+arrBattle[i] === 921 || +arrBattle[i] === 21) {
-        element[i].src = 'img/shipfire/z2_1f.gif'
-        element[i + 10].src = 'img/shipfire/z2_2f.gif'
+        element[i].style.backgroundImage = "url('img/shipfire/z2_1f.gif')"
+        element[i + 10].style.backgroundImage = "url('img/shipfire/z2_2f.gif')"
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
     } else if (+arrBattle[i] === 9212 || +arrBattle[i] === 212) {
-        element[i].src = 'img/ship2fire/z2_1cf.gif'
-        element[i + 1].src = 'img/ship2fire/z2_2cf.gif'
+        element[i].style.backgroundImage = "url('img/ship2fire/z2_1cf.gif')"
+        element[i + 1].style.backgroundImage = "url('img/ship2fire/z2_2cf.gif')"
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
     }
@@ -4567,16 +4567,16 @@ function BaSea2Comp(i) {
 
 function BaSea3Comp(i) {
     if (+arrBattle[i] === 931) {
-        element[i].src = 'img/shipfire/z3_1f.gif'
-        element[i + 10].src = 'img/shipfire/z3_2f.gif'
-        element[i + 20].src = 'img/shipfire/z3_3f.gif'
+        element[i].style.backgroundImage = "url('img/shipfire/z3_1f.gif')"
+        element[i + 10].style.backgroundImage = "url('img/shipfire/z3_2f.gif')"
+        element[i + 20].style.backgroundImage = "url('img/shipfire/z3_3f.gif')"
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
         arrBattle[i + 20] = 5
     } else if (+arrBattle[i] === 9313) {
-        element[i].src = 'img/ship2fire/z3_1cf.gif'
-        element[i + 1].src = 'img/ship2fire/z3_2cf.gif'
-        element[i + 2].src = 'img/ship2fire/z3_3cf.gif'
+        element[i].style.backgroundImage = "url('img/ship2fire/z3_1cf.gif')"
+        element[i + 1].style.backgroundImage = "url('img/ship2fire/z3_2cf.gif')"
+        element[i + 2].style.backgroundImage = "url('img/ship2fire/z3_3cf.gif')"
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
         arrBattle[i + 2] = 5
@@ -4586,19 +4586,19 @@ function BaSea3Comp(i) {
 
 function baSea4Comp(i) {
     if (+arrBattle[i] === 941) {
-        element[i].src = 'img/shipfire/z4_1f.gif'
-        element[i + 10].src = 'img/shipfire/z4_2f.gif'
-        element[i + 20].src = 'img/shipfire/z4_3f.gif'
-        element[i + 30].src = 'img/shipfire/z4_4f.gif'
+        element[i].style.backgroundImage = "url('img/shipfire/z4_1f.gif')"
+        element[i + 10].style.backgroundImage = "url('img/shipfire/z4_2f.gif')"
+        element[i + 20].style.backgroundImage = "url('img/shipfire/z4_3f.gif')"
+        element[i + 30].style.backgroundImage = "url('img/shipfire/z4_4f.gif')"
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
         arrBattle[i + 20] = 5
         arrBattle[i + 30] = 5
     } else if (+arrBattle[i] === 9414) {
-        element[i].src = 'img/ship2fire/z4_1cf.gif'
-        element[i + 1].src = 'img/ship2fire/z4_2cf.gif'
-        element[i + 2].src = 'img/ship2fire/z4_3cf.gif'
-        element[i + 3].src = 'img/ship2fire/z4_4cf.gif'
+        element[i].style.backgroundImage = "url('img/ship2fire/z4_1cf.gif')"
+        element[i + 1].style.backgroundImage = "url('img/ship2fire/z4_2cf.gif')"
+        element[i + 2].style.backgroundImage = "url('img/ship2fire/z4_3cf.gif')"
+        element[i + 3].style.backgroundImage = "url('img/ship2fire/z4_4cf.gif')"
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
         arrBattle[i + 2] = 5
