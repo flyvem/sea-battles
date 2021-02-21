@@ -1,4 +1,4 @@
-let elems = document.getElementsByTagName('img');
+let element = document.getElementsByTagName('img');
 let flagCoup = true;
 let flagFind = 0;
 let counterFind3 = 0;
@@ -57,250 +57,250 @@ let arrBattle = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
     , [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
 
 
-function over(daa) {
+function over(item) {
     if (flagCoup === true) {
         if (counter === 0) {
-            if (+arrSea[+daa.id - 1] === 0) {
-                if ((+daa.id - 1) < 70) {
+            if (+arrSea[+item.id - 1] === 0) {
+                if ((+item.id - 1) < 70) {
                     shipFunc(img.z2
-                        , +daa.id + 9
-                        , +daa.id + 19
-                        , +daa.id + 29
-                        , +daa.id - 1)
-                } else if ((+daa.id - 1) >= 70 && (+daa.id - 1) < 80) {
+                        , +item.id + 9
+                        , +item.id + 19
+                        , +item.id + 29
+                        , +item.id - 1)
+                } else if ((+item.id - 1) >= 70 && (+item.id - 1) < 80) {
                     shipFunc(img.z2
-                        , +daa.id - 11
-                        , +daa.id - 1
-                        , +daa.id + 9
-                        , +daa.id + 19)
-                } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
+                        , +item.id - 11
+                        , +item.id - 1
+                        , +item.id + 9
+                        , +item.id + 19)
+                } else if ((+item.id - 1) >= 80 && (+item.id - 1) < 90) {
                     shipFunc(img.z2
-                        , +daa.id - 11
-                        , +daa.id - 1
-                        , +daa.id + 9
-                        , +daa.id - 21)
+                        , +item.id - 11
+                        , +item.id - 1
+                        , +item.id + 9
+                        , +item.id - 21)
                 } else {
                     shipFunc(img.z2
-                        , +daa.id - 1
-                        , +daa.id - 11
-                        , +daa.id - 21
-                        , +daa.id - 31)
+                        , +item.id - 1
+                        , +item.id - 11
+                        , +item.id - 21
+                        , +item.id - 31)
                 }
             }
         } else if (counter === 1 || counter === 2) {
-            if ((+daa.id - 1) < 80) {
+            if ((+item.id - 1) < 80) {
                 shipFuncIf(img.z2
-                    , +daa.id - 1
-                    , +daa.id + 9
-                    , +daa.id + 19)
-            } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
+                    , +item.id - 1
+                    , +item.id + 9
+                    , +item.id + 19)
+            } else if ((+item.id - 1) >= 80 && (+item.id - 1) < 90) {
                 shipFuncIf(img.z2
-                    , +daa.id - 11
-                    , +daa.id - 1
-                    , +daa.id + 9)
+                    , +item.id - 11
+                    , +item.id - 1
+                    , +item.id + 9)
             } else {
                 shipFuncIf(img.z2
-                    , +daa.id - 21
-                    , +daa.id - 11
-                    , +daa.id - 1)
+                    , +item.id - 21
+                    , +item.id - 11
+                    , +item.id - 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
-            if ((+daa.id - 1) < 90) {
+            if ((+item.id - 1) < 90) {
                 shipFuncIf2(img.z2
-                    , +daa.id - 1
-                    , +daa.id + 9)
+                    , +item.id - 1
+                    , +item.id + 9)
             } else {
                 shipFuncIf2(img.z2
-                    , +daa.id - 1
-                    , +daa.id - 11)
+                    , +item.id - 1
+                    , +item.id - 11)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
             shipFuncIf1(img.z2
-                , +daa.id - 1)
+                , +item.id - 1)
         }
     } else {
         if (counter === 0) {
-            if (+arrSea[+daa.id - 1] === 0) {
-                if ((+daa.id - 1) % 10 === 7) {
+            if (+arrSea[+item.id - 1] === 0) {
+                if ((+item.id - 1) % 10 === 7) {
                     shipFunc(img.z2
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id + 1)
-                } else if ((+daa.id - 1) % 10 === 8) {
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id + 1)
+                } else if ((+item.id - 1) % 10 === 8) {
                     shipFunc(img.z2
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id - 3)
-                } else if ((+daa.id - 1) % 10 === 9) {
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id - 3)
+                } else if ((+item.id - 1) % 10 === 9) {
                     shipFunc(img.z2
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id - 4
-                        , +daa.id - 3)
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id - 4
+                        , +item.id - 3)
                 } else {
                     shipFunc(img.z2
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id + 1
-                        , +daa.id + 2)
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id + 1
+                        , +item.id + 2)
                 }
             }
         } else if (counter === 1 || counter === 2) {
-            if ((+daa.id - 1) % 10 === 8) {
+            if ((+item.id - 1) % 10 === 8) {
                 shipFuncIf(img.z2
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id - 1)
-            } else if ((+daa.id - 1) % 10 === 9) {
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id - 1)
+            } else if ((+item.id - 1) % 10 === 9) {
                 shipFuncIf(img.z2
-                    , +daa.id - 3
-                    , +daa.id - 2
-                    , +daa.id - 1)
+                    , +item.id - 3
+                    , +item.id - 2
+                    , +item.id - 1)
             } else {
                 shipFuncIf(img.z2
-                    , +daa.id - 1
-                    , +daa.id
-                    , +daa.id + 1)
+                    , +item.id - 1
+                    , +item.id
+                    , +item.id + 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
-            if ((+daa.id - 1) % 10 === 9) {
+            if ((+item.id - 1) % 10 === 9) {
                 shipFuncIf2(img.z2
-                    , +daa.id - 1
-                    , +daa.id - 2)
+                    , +item.id - 1
+                    , +item.id - 2)
             } else {
                 shipFuncIf2(img.z2
-                    , +daa.id - 1
-                    , +daa.id)
+                    , +item.id - 1
+                    , +item.id)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
             shipFuncIf1(img.z2
-                , +daa.id - 1)
+                , +item.id - 1)
         }
     }
 }
 
-function out(daa) {
+function out(item) {
     if (flagCoup === true) {
         if (counter === 0) {
-            if (+arrSea[+daa.id - 1] === 0) {
-                if ((+daa.id - 1) < 70) {
+            if (+arrSea[+item.id - 1] === 0) {
+                if ((+item.id - 1) < 70) {
                     shipFunc(img.z1
-                        , +daa.id + 9
-                        , +daa.id + 19
-                        , +daa.id + 29
-                        , +daa.id - 1)
-                } else if ((+daa.id - 1) >= 70 && (+daa.id - 1) < 80) {
+                        , +item.id + 9
+                        , +item.id + 19
+                        , +item.id + 29
+                        , +item.id - 1)
+                } else if ((+item.id - 1) >= 70 && (+item.id - 1) < 80) {
                     shipFunc(img.z1
-                        , +daa.id - 11
-                        , +daa.id - 1
-                        , +daa.id + 9
-                        , +daa.id + 19)
-                } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
+                        , +item.id - 11
+                        , +item.id - 1
+                        , +item.id + 9
+                        , +item.id + 19)
+                } else if ((+item.id - 1) >= 80 && (+item.id - 1) < 90) {
                     shipFunc(img.z1
-                        , +daa.id - 11
-                        , +daa.id - 1
-                        , +daa.id + 9
-                        , +daa.id - 21)
+                        , +item.id - 11
+                        , +item.id - 1
+                        , +item.id + 9
+                        , +item.id - 21)
                 } else {
                     shipFunc(img.z1
-                        , +daa.id - 1
-                        , +daa.id - 11
-                        , +daa.id - 21
-                        , +daa.id - 31)
+                        , +item.id - 1
+                        , +item.id - 11
+                        , +item.id - 21
+                        , +item.id - 31)
                 }
             }
         } else if (counter === 1 || counter === 2) {
-            if ((+daa.id - 1) < 80) {
+            if ((+item.id - 1) < 80) {
                 shipFuncIf(img.z1
-                    , +daa.id - 1
-                    , +daa.id + 9
-                    , +daa.id + 19)
-            } else if ((+daa.id - 1) >= 80 && (+daa.id - 1) < 90) {
+                    , +item.id - 1
+                    , +item.id + 9
+                    , +item.id + 19)
+            } else if ((+item.id - 1) >= 80 && (+item.id - 1) < 90) {
                 shipFuncIf(img.z1
-                    , +daa.id - 11
-                    , +daa.id - 1
-                    , +daa.id + 9)
+                    , +item.id - 11
+                    , +item.id - 1
+                    , +item.id + 9)
             } else {
                 shipFuncIf(img.z1
-                    , +daa.id - 21
-                    , +daa.id - 11
-                    , +daa.id - 1)
+                    , +item.id - 21
+                    , +item.id - 11
+                    , +item.id - 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
-            if ((+daa.id - 1) < 90) {
+            if ((+item.id - 1) < 90) {
                 shipFuncIf2(img.z1
-                    , +daa.id - 1
-                    , +daa.id + 9)
+                    , +item.id - 1
+                    , +item.id + 9)
             } else {
                 shipFuncIf2(img.z1
-                    , +daa.id - 1
-                    , +daa.id - 11)
+                    , +item.id - 1
+                    , +item.id - 11)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
             shipFuncIf1(img.z1
-                , +daa.id - 1)
+                , +item.id - 1)
         }
     } else {
         if (counter === 0) {
-            if (+arrSea[+daa.id - 1] === 0) {
-                if ((+daa.id - 1) % 10 === 7) {
+            if (+arrSea[+item.id - 1] === 0) {
+                if ((+item.id - 1) % 10 === 7) {
                     shipFunc(img.z1
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id + 1)
-                } else if ((+daa.id - 1) % 10 === 8) {
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id + 1)
+                } else if ((+item.id - 1) % 10 === 8) {
                     shipFunc(img.z1
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id - 3)
-                } else if ((+daa.id - 1) % 10 === 9) {
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id - 3)
+                } else if ((+item.id - 1) % 10 === 9) {
                     shipFunc(img.z1
-                        , +daa.id - 2
-                        , +daa.id - 1
-                        , +daa.id - 4
-                        , +daa.id - 3)
+                        , +item.id - 2
+                        , +item.id - 1
+                        , +item.id - 4
+                        , +item.id - 3)
                 } else {
                     shipFunc(img.z1
-                        , +daa.id - 1
-                        , +daa.id
-                        , +daa.id + 1
-                        , +daa.id + 2)
+                        , +item.id - 1
+                        , +item.id
+                        , +item.id + 1
+                        , +item.id + 2)
                 }
             }
         } else if (counter === 1 || counter === 2) {
-            if ((+daa.id - 1) % 10 === 8) {
+            if ((+item.id - 1) % 10 === 8) {
                 shipFuncIf(img.z1
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id - 1)
-            } else if ((+daa.id - 1) % 10 === 9) {
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id - 1)
+            } else if ((+item.id - 1) % 10 === 9) {
                 shipFuncIf(img.z1
-                    , +daa.id - 3
-                    , +daa.id - 2
-                    , +daa.id - 1)
+                    , +item.id - 3
+                    , +item.id - 2
+                    , +item.id - 1)
             } else {
                 shipFuncIf(img.z1
-                    , +daa.id - 1
-                    , +daa.id
-                    , +daa.id + 1)
+                    , +item.id - 1
+                    , +item.id
+                    , +item.id + 1)
             }
         } else if (counter === 3 || counter === 4 || counter === 5) {
-            if ((+daa.id - 1) % 10 === 9) {
+            if ((+item.id - 1) % 10 === 9) {
                 shipFuncIf2(img.z1
-                    , +daa.id - 1
-                    , +daa.id - 2)
+                    , +item.id - 1
+                    , +item.id - 2)
             } else {
                 shipFuncIf2(img.z1
-                    , +daa.id - 1
-                    , +daa.id)
+                    , +item.id - 1
+                    , +item.id)
             }
         } else if (counter === 6 || counter === 7 || counter === 8 || counter === 9) {
             shipFuncIf1(img.z1
-                , +daa.id - 1)
+                , +item.id - 1)
         }
     }
 
@@ -309,7 +309,7 @@ function out(daa) {
 function shipImg(img) {
     for (let i = 0; i < arrSea.length; i++) {
         if (+arrSea[i] === 2) {
-            elems[i].src = img
+            element[i].src = img
         }
     }
 }
@@ -331,19 +331,19 @@ function imgPosition4AutoStart(z, x, a, s, q, w, c, v) {
 function imgPosition4(z, x, c, v) {
 
     if (flagCoup === true) {
-        elems[z].src = img.v41
-        elems[x].src = img.v42
-        elems[c].src = img.v43
-        elems[v].src = img.v44
+        element[z].src = img.v41
+        element[x].src = img.v42
+        element[c].src = img.v43
+        element[v].src = img.v44
         arrSea[z] = 41
         arrSea[x] = 42
         arrSea[c] = 43
         arrSea[v] = 44
     } else {
-        elems[z].src = img.g41
-        elems[x].src = img.g42
-        elems[c].src = img.g43
-        elems[v].src = img.g44
+        element[z].src = img.g41
+        element[x].src = img.g42
+        element[c].src = img.g43
+        element[v].src = img.g44
         arrSea[z] = 414
         arrSea[x] = 424
         arrSea[c] = 434
@@ -354,16 +354,16 @@ function imgPosition4(z, x, c, v) {
 function imgPosition3(z, x, c) {
 
     if (flagCoup === true) {
-        elems[z].src = img.v31
-        elems[x].src = img.v32
-        elems[c].src = img.v33
+        element[z].src = img.v31
+        element[x].src = img.v32
+        element[c].src = img.v33
         arrSea[z] = 31
         arrSea[x] = 32
         arrSea[c] = 33
     } else {
-        elems[z].src = img.g31
-        elems[x].src = img.g32
-        elems[c].src = img.g33
+        element[z].src = img.g31
+        element[x].src = img.g32
+        element[c].src = img.g33
         arrSea[z] = 313
         arrSea[x] = 323
         arrSea[c] = 333
@@ -373,13 +373,13 @@ function imgPosition3(z, x, c) {
 function imgPosition2(z, x) {
 
     if (flagCoup === true) {
-        elems[z].src = img.v21
-        elems[x].src = img.v22
+        element[z].src = img.v21
+        element[x].src = img.v22
         arrSea[z] = 21
         arrSea[x] = 22
     } else {
-        elems[z].src = img.g21
-        elems[x].src = img.g22
+        element[z].src = img.g21
+        element[x].src = img.g22
         arrSea[z] = 212
         arrSea[x] = 222
     }
@@ -388,10 +388,10 @@ function imgPosition2(z, x) {
 function imgPosition1(z) {
 
     if (flagCoup === true) {
-        elems[z].src = img.v1
+        element[z].src = img.v1
         arrSea[z] = 11
     } else {
-        elems[z].src = img.g1
+        element[z].src = img.g1
         arrSea[z] = 111
     }
 
@@ -415,1174 +415,1174 @@ function positionNumber(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, 
     arrSea[q14] = 2
 }
 
-function installShip4(daa) {
+function installShip4(item) {
     if (flagCoup === true) {
-        if ((+daa.id - 1) < 10) {
-            if ((+daa.id - 1) === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20
-                    , +daa.id + 30
-                    , +daa.id + 39
-                    , +daa.id + 40)
+        if ((+item.id - 1) < 10) {
+            if ((+item.id - 1) === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id
+                    , +item.id + 10
+                    , +item.id + 20
+                    , +item.id + 30
+                    , +item.id + 39
+                    , +item.id + 40)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 28
-                    , +daa.id + 38
-                    , +daa.id + 39)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 28
+                    , +item.id + 38
+                    , +item.id + 39)
 
             } else {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20
-                    , +daa.id + 28
-                    , +daa.id + 30
-                    , +daa.id + 38
-                    , +daa.id + 39
-                    , +daa.id + 40)
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20
+                    , +item.id + 28
+                    , +item.id + 30
+                    , +item.id + 38
+                    , +item.id + 39
+                    , +item.id + 40)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 60)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20
-                    , +daa.id + 30
-                    , +daa.id + 39
-                    , +daa.id + 40)
+        } else if (((+item.id - 1) > 9) && ((+item.id - 1) < 60)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 20
+                    , +item.id + 30
+                    , +item.id + 39
+                    , +item.id + 40)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 28
-                    , +daa.id + 38
-                    , +daa.id + 39)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 28
+                    , +item.id + 38
+                    , +item.id + 39)
 
             } else {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20
-                    , +daa.id + 28
-                    , +daa.id + 30
-                    , +daa.id + 38
-                    , +daa.id + 39
-                    , +daa.id + 40)
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20
+                    , +item.id + 28
+                    , +item.id + 30
+                    , +item.id + 38
+                    , +item.id + 39
+                    , +item.id + 40)
             }
-        } else if (+daa.id - 1 >= 60 && +daa.id - 1 < 70) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20
-                    , +daa.id + 30)
+        } else if (+item.id - 1 >= 60 && +item.id - 1 < 70) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 20
+                    , +item.id + 30)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 28)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 28)
 
             } else {
-                imgPosition4(+daa.id - 1, +daa.id + 9, +daa.id + 19, +daa.id + 29)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20
-                    , +daa.id + 28
-                    , +daa.id + 30)
+                imgPosition4(+item.id - 1, +item.id + 9, +item.id + 19, +item.id + 29)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20
+                    , +item.id + 28
+                    , +item.id + 30)
             }
-        } else if (+daa.id - 1 >= 70 && +daa.id - 1 < 80) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition4(+daa.id - 11, +daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20)
+        } else if (+item.id - 1 >= 70 && +item.id - 1 < 80) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition4(+item.id - 11, +item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 21
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 20)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 11, +daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 22
-                    , +daa.id - 21
-                    , +daa.id - 12
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 11, +item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 22
+                    , +item.id - 21
+                    , +item.id - 12
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18)
 
             } else {
-                imgPosition4(+daa.id - 11, +daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 22
-                    , +daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20)
+                imgPosition4(+item.id - 11, +item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 22
+                    , +item.id - 21
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20)
             }
 
-        } else if (+daa.id - 1 >= 80 && +daa.id - 1 < 90) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition4(+daa.id - 21, +daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 30
-                    , +daa.id - 31
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10)
+        } else if (+item.id - 1 >= 80 && +item.id - 1 < 90) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition4(+item.id - 21, +item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 30
+                    , +item.id - 31
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 21, +daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 32
-                    , +daa.id - 31
-                    , +daa.id - 22
-                    , +daa.id - 12
-                    , +daa.id - 2
-                    , +daa.id + 8)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 21, +item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 32
+                    , +item.id - 31
+                    , +item.id - 22
+                    , +item.id - 12
+                    , +item.id - 2
+                    , +item.id + 8)
 
             } else {
-                imgPosition4(+daa.id - 21, +daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 32
-                    , +daa.id - 31
-                    , +daa.id - 30
-                    , +daa.id - 22
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10)
+                imgPosition4(+item.id - 21, +item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 32
+                    , +item.id - 31
+                    , +item.id - 30
+                    , +item.id - 22
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10)
 
             }
-        } else if (+daa.id - 1 >= 90 && +daa.id - 1 < 100) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition4(+daa.id - 31, +daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 41
-                    , +daa.id - 40
-                    , +daa.id - 30
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id)
+        } else if (+item.id - 1 >= 90 && +item.id - 1 < 100) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition4(+item.id - 31, +item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 41
+                    , +item.id - 40
+                    , +item.id - 30
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition4(+daa.id - 31, +daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 42
-                    , +daa.id - 41
-                    , +daa.id - 32
-                    , +daa.id - 22
-                    , +daa.id - 12
-                    , +daa.id - 2)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition4(+item.id - 31, +item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 42
+                    , +item.id - 41
+                    , +item.id - 32
+                    , +item.id - 22
+                    , +item.id - 12
+                    , +item.id - 2)
 
             } else {
-                imgPosition4(+daa.id - 31, +daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 42
-                    , +daa.id - 41
-                    , +daa.id - 40
-                    , +daa.id - 32
-                    , +daa.id - 30
-                    , +daa.id - 22
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id)
+                imgPosition4(+item.id - 31, +item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 42
+                    , +item.id - 41
+                    , +item.id - 40
+                    , +item.id - 32
+                    , +item.id - 30
+                    , +item.id - 22
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id)
             }
         }
     } else {
-        if ((+daa.id - 1) === 0) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id + 3
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12
-                , +daa.id + 13)
+        if ((+item.id - 1) === 0) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id + 3
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12
+                , +item.id + 13)
 
-        } else if ((+daa.id - 1) === 6) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 2
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12)
+        } else if ((+item.id - 1) === 6) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 2
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12)
 
-        } else if (((+daa.id - 1) > 0) && ((+daa.id - 1) < 6)) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 2
-                , +daa.id + 3
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12
-                , +daa.id + 13)
+        } else if (((+item.id - 1) > 0) && ((+item.id - 1) < 6)) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 2
+                , +item.id + 3
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12
+                , +item.id + 13)
 
-        } else if ((+daa.id - 1) === 7) {
-            imgPosition4(+daa.id - 2, +daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 3
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
+        } else if ((+item.id - 1) === 7) {
+            imgPosition4(+item.id - 2, +item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 3
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
 
-        } else if ((+daa.id - 1) === 8) {
-            imgPosition4(+daa.id - 3, +daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 4
-                , +daa.id + 6
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10)
+        } else if ((+item.id - 1) === 8) {
+            imgPosition4(+item.id - 3, +item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 4
+                , +item.id + 6
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10)
 
-        } else if ((+daa.id - 1) === 9) {
-            imgPosition4(+daa.id - 4, +daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 5
-                , +daa.id + 5
-                , +daa.id + 6
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9)
+        } else if ((+item.id - 1) === 9) {
+            imgPosition4(+item.id - 4, +item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 5
+                , +item.id + 5
+                , +item.id + 6
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9)
 
-        } else if (((+daa.id - 1) % 10 === 0) && ((+daa.id - 1) > 0) && ((+daa.id - 1) < 90)) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id - 7
-                , +daa.id + 3
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12
-                , +daa.id + 13)
+        } else if (((+item.id - 1) % 10 === 0) && ((+item.id - 1) > 0) && ((+item.id - 1) < 90)) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id - 7
+                , +item.id + 3
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12
+                , +item.id + 13)
 
-        } else if (((+daa.id - 1) % 10 === 6) && ((+daa.id - 1) > 6) && ((+daa.id - 1) < 96)) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12)
+        } else if (((+item.id - 1) % 10 === 6) && ((+item.id - 1) > 6) && ((+item.id - 1) < 96)) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12)
 
-        } else if (((+daa.id - 1) % 10 === 7) && ((+daa.id - 1) > 7) && ((+daa.id - 1) < 97)) {
-            imgPosition4(+daa.id - 2, +daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
+        } else if (((+item.id - 1) % 10 === 7) && ((+item.id - 1) > 7) && ((+item.id - 1) < 97)) {
+            imgPosition4(+item.id - 2, +item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
 
-        } else if (((+daa.id - 1) % 10 === 8) && ((+daa.id - 1) > 8) && ((+daa.id - 1) < 98)) {
-            imgPosition4(+daa.id - 3, +daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 4
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id + 6
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10)
+        } else if (((+item.id - 1) % 10 === 8) && ((+item.id - 1) > 8) && ((+item.id - 1) < 98)) {
+            imgPosition4(+item.id - 3, +item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 4
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id + 6
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10)
 
-        } else if (((+daa.id - 1) % 10 === 9) && ((+daa.id - 1) > 9) && ((+daa.id - 1) < 99)) {
-            imgPosition4(+daa.id - 4, +daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 5
-                , +daa.id - 15
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id + 5
-                , +daa.id + 6
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9)
+        } else if (((+item.id - 1) % 10 === 9) && ((+item.id - 1) > 9) && ((+item.id - 1) < 99)) {
+            imgPosition4(+item.id - 4, +item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 5
+                , +item.id - 15
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id + 5
+                , +item.id + 6
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9)
 
-        } else if ((+daa.id - 1) === 99) {
-            imgPosition4(+daa.id - 4, +daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 5
-                , +daa.id - 15
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11)
+        } else if ((+item.id - 1) === 99) {
+            imgPosition4(+item.id - 4, +item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 5
+                , +item.id - 15
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11)
 
-        } else if ((+daa.id - 1) === 98) {
-            imgPosition4(+daa.id - 3, +daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 4
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10)
+        } else if ((+item.id - 1) === 98) {
+            imgPosition4(+item.id - 3, +item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 4
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10)
 
-        } else if ((+daa.id - 1) === 97) {
-            imgPosition4(+daa.id - 2, +daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9)
+        } else if ((+item.id - 1) === 97) {
+            imgPosition4(+item.id - 2, +item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9)
 
-        } else if ((+daa.id - 1) === 96) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8)
+        } else if ((+item.id - 1) === 96) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8)
 
-        } else if ((+daa.id - 1) === 90) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id + 3
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id - 7)
+        } else if ((+item.id - 1) === 90) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id + 3
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id - 7)
 
-        } else if (((+daa.id - 1) > 90) && ((+daa.id - 1) < 96)) {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id + 3
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id - 7
-                , +daa.id - 2)
+        } else if (((+item.id - 1) > 90) && ((+item.id - 1) < 96)) {
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id + 3
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id - 7
+                , +item.id - 2)
         } else {
-            imgPosition4(+daa.id - 1, +daa.id, +daa.id + 1, +daa.id + 2)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id - 7
-                , +daa.id + 3
-                , +daa.id + 13
-                , +daa.id + 12
-                , +daa.id + 11
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8)
+            imgPosition4(+item.id - 1, +item.id, +item.id + 1, +item.id + 2)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id - 7
+                , +item.id + 3
+                , +item.id + 13
+                , +item.id + 12
+                , +item.id + 11
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8)
         }
     }
 }
 
-function installShip3(daa) {
+function installShip3(item) {
     if (flagCoup === true) {
-        if (+daa.id - 1 < 10) {
-            if ((+daa.id - 1) === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20
-                    , +daa.id + 29
-                    , +daa.id + 30)
+        if (+item.id - 1 < 10) {
+            if ((+item.id - 1) === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id
+                    , +item.id + 10
+                    , +item.id + 20
+                    , +item.id + 29
+                    , +item.id + 30)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 28
-                    , +daa.id + 29)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 28
+                    , +item.id + 29)
 
             } else {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20
-                    , +daa.id + 28
-                    , +daa.id + 29
-                    , +daa.id + 30)
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20
+                    , +item.id + 28
+                    , +item.id + 29
+                    , +item.id + 30)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 70)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20
-                    , +daa.id + 29
-                    , +daa.id + 30)
+        } else if (((+item.id - 1) > 9) && ((+item.id - 1) < 70)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 20
+                    , +item.id + 29
+                    , +item.id + 30)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 28
-                    , +daa.id + 29)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 28
+                    , +item.id + 29)
 
             } else {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20
-                    , +daa.id + 28
-                    , +daa.id + 29
-                    , +daa.id + 30)
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20
+                    , +item.id + 28
+                    , +item.id + 29
+                    , +item.id + 30)
             }
-        } else if (+daa.id - 1 >= 70 && +daa.id - 1 < 80) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 20)
+        } else if (+item.id - 1 >= 70 && +item.id - 1 < 80) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 20)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18)
 
             } else {
-                imgPosition3(+daa.id - 1, +daa.id + 9, +daa.id + 19)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 20)
+                imgPosition3(+item.id - 1, +item.id + 9, +item.id + 19)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 20)
             }
 
-        } else if (+daa.id - 1 >= 80 && +daa.id - 1 < 90) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition3(+daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition3(+daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 22
-                    , +daa.id - 21
-                    , +daa.id - 12
-                    , +daa.id - 2
-                    , +daa.id + 8)
+        } else if (+item.id - 1 >= 80 && +item.id - 1 < 90) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition3(+item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 21
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition3(+item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 22
+                    , +item.id - 21
+                    , +item.id - 12
+                    , +item.id - 2
+                    , +item.id + 8)
             } else {
-                imgPosition3(+daa.id - 11, +daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 22
-                    , +daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10)
+                imgPosition3(+item.id - 11, +item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 22
+                    , +item.id - 21
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10)
 
             }
-        } else if (+daa.id - 1 >= 90 && +daa.id - 1 < 100) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition3(+daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 31
-                    , +daa.id - 30
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id)
+        } else if (+item.id - 1 >= 90 && +item.id - 1 < 100) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition3(+item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 31
+                    , +item.id - 30
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition3(+daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 32
-                    , +daa.id - 31
-                    , +daa.id - 22
-                    , +daa.id - 12
-                    , +daa.id - 2)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition3(+item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 32
+                    , +item.id - 31
+                    , +item.id - 22
+                    , +item.id - 12
+                    , +item.id - 2)
 
             } else {
-                imgPosition3(+daa.id - 21, +daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 32
-                    , +daa.id - 31
-                    , +daa.id - 30
-                    , +daa.id - 22
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id)
+                imgPosition3(+item.id - 21, +item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 32
+                    , +item.id - 31
+                    , +item.id - 30
+                    , +item.id - 22
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id)
             }
         }
     } else {
-        if ((+daa.id - 1) === 0) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id + 2
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12)
-        } else if ((+daa.id - 1) === 7) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
-        } else if ((+daa.id - 1) === 8) {
-            imgPosition3(+daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 3
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10)
-        } else if ((+daa.id - 1) === 9) {
-            imgPosition3(+daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 4
-                , +daa.id + 6
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9)
+        if ((+item.id - 1) === 0) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id + 2
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12)
+        } else if ((+item.id - 1) === 7) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
+        } else if ((+item.id - 1) === 8) {
+            imgPosition3(+item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 3
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10)
+        } else if ((+item.id - 1) === 9) {
+            imgPosition3(+item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 4
+                , +item.id + 6
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9)
 
-        } else if (((+daa.id - 1) > 0) && ((+daa.id - 1) < 7)) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id + 2
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12)
+        } else if (((+item.id - 1) > 0) && ((+item.id - 1) < 7)) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id + 2
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12)
 
-        } else if (((+daa.id - 1) % 10 === 0) && ((+daa.id - 1) > 0) && ((+daa.id - 1) < 90)) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id + 2
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11
-                , +daa.id + 12)
+        } else if (((+item.id - 1) % 10 === 0) && ((+item.id - 1) > 0) && ((+item.id - 1) < 90)) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id + 2
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11
+                , +item.id + 12)
 
-        } else if (((+daa.id - 1) % 10 === 7) && ((+daa.id - 1) > 7) && ((+daa.id - 1) < 97)) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 11
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8)
-        } else if (((+daa.id - 1) % 10 === 8) && ((+daa.id - 1) > 8) && ((+daa.id - 1) < 98)) {
-            imgPosition3(+daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8
-                , +daa.id + 7)
-        } else if (((+daa.id - 1) % 10 === 9) && ((+daa.id - 1) > 9) && ((+daa.id - 1) < 99)) {
-            imgPosition3(+daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 4
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id + 9
-                , +daa.id + 8
-                , +daa.id + 7
-                , +daa.id + 6)
-        } else if ((+daa.id - 1) === 97) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9)
-
-
-        } else if ((+daa.id - 1) === 98) {
-            imgPosition3(+daa.id - 2, +daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10)
-
-        } else if ((+daa.id - 1) === 99) {
-            imgPosition3(+daa.id - 3, +daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 4
-                , +daa.id - 14
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11)
+        } else if (((+item.id - 1) % 10 === 7) && ((+item.id - 1) > 7) && ((+item.id - 1) < 97)) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 11
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8)
+        } else if (((+item.id - 1) % 10 === 8) && ((+item.id - 1) > 8) && ((+item.id - 1) < 98)) {
+            imgPosition3(+item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8
+                , +item.id + 7)
+        } else if (((+item.id - 1) % 10 === 9) && ((+item.id - 1) > 9) && ((+item.id - 1) < 99)) {
+            imgPosition3(+item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 4
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id + 9
+                , +item.id + 8
+                , +item.id + 7
+                , +item.id + 6)
+        } else if ((+item.id - 1) === 97) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9)
 
 
-        } else if ((+daa.id - 1) === 90) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id + 2)
+        } else if ((+item.id - 1) === 98) {
+            imgPosition3(+item.id - 2, +item.id - 1, +item.id)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10)
 
-        } else if (((+daa.id - 1) > 90) && ((+daa.id - 1) < 97)) {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id + 2)
+        } else if ((+item.id - 1) === 99) {
+            imgPosition3(+item.id - 3, +item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 4
+                , +item.id - 14
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11)
+
+
+        } else if ((+item.id - 1) === 90) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id + 2)
+
+        } else if (((+item.id - 1) > 90) && ((+item.id - 1) < 97)) {
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id + 2)
 
         } else {
-            imgPosition3(+daa.id - 1, +daa.id, +daa.id + 1)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id - 8
-                , +daa.id + 2
-                , +daa.id + 12
-                , +daa.id + 11
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8)
+            imgPosition3(+item.id - 1, +item.id, +item.id + 1)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id - 8
+                , +item.id + 2
+                , +item.id + 12
+                , +item.id + 11
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8)
         }
     }
 }
 
-function installShip2(daa) {
+function installShip2(item) {
     if (flagCoup === true) {
-        if (+daa.id - 1 < 10) {
-            if ((+daa.id - 1) === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id
-                    , +daa.id + 10
-                    , +daa.id + 19
-                    , +daa.id + 20)
+        if (+item.id - 1 < 10) {
+            if ((+item.id - 1) === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id
+                    , +item.id + 10
+                    , +item.id + 19
+                    , +item.id + 20)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 19)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 19)
             } else {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 19
-                    , +daa.id + 20)
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 19
+                    , +item.id + 20)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 80)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10
-                    , +daa.id + 19
-                    , +daa.id + 20)
-            } else if (((+daa.id - 1) > 0) && ((+daa.id - 1) < 9)) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 19
-                    , +daa.id + 20)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 18
-                    , +daa.id + 19)
+        } else if (((+item.id - 1) > 9) && ((+item.id - 1) < 80)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10
+                    , +item.id + 19
+                    , +item.id + 20)
+            } else if (((+item.id - 1) > 0) && ((+item.id - 1) < 9)) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 19
+                    , +item.id + 20)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 18
+                    , +item.id + 19)
             } else {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10
-                    , +daa.id + 18
-                    , +daa.id + 19
-                    , +daa.id + 20)
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10
+                    , +item.id + 18
+                    , +item.id + 19
+                    , +item.id + 20)
             }
-        } else if ((+daa.id - 1 >= 80) && (+daa.id - 1 < 90)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id
-                    , +daa.id + 10)
+        } else if ((+item.id - 1 >= 80) && (+item.id - 1 < 90)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 11
+                    , +item.id - 10
+                    , +item.id
+                    , +item.id + 10)
 
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2
-                    , +daa.id + 8)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 12
+                    , +item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2
+                    , +item.id + 8)
 
             } else {
-                imgPosition2(+daa.id - 1, +daa.id + 9)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 10)
+                imgPosition2(+item.id - 1, +item.id + 9)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 10)
             }
-        } else if ((+daa.id - 1 >= 90) && (+daa.id - 1 < 100)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition2(+daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 10
-                    , +daa.id)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition2(+daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 21
-                    , +daa.id - 22
-                    , +daa.id - 12
-                    , +daa.id - 2)
+        } else if ((+item.id - 1 >= 90) && (+item.id - 1 < 100)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition2(+item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 21
+                    , +item.id - 20
+                    , +item.id - 10
+                    , +item.id)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition2(+item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 21
+                    , +item.id - 22
+                    , +item.id - 12
+                    , +item.id - 2)
 
             } else {
-                imgPosition2(+daa.id - 11, +daa.id - 1)
-                positionNumber(+daa.id - 22
-                    , +daa.id - 21
-                    , +daa.id - 20
-                    , +daa.id - 12
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id)
+                imgPosition2(+item.id - 11, +item.id - 1)
+                positionNumber(+item.id - 22
+                    , +item.id - 21
+                    , +item.id - 20
+                    , +item.id - 12
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id)
             }
         }
     } else {
-        if ((+daa.id - 1) === 0) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id + 1
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
+        if ((+item.id - 1) === 0) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id + 1
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
 
-        } else if ((+daa.id - 1) === 8) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10)
+        } else if ((+item.id - 1) === 8) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10)
 
-        } else if ((+daa.id - 1) === 9) {
-            imgPosition2(+daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 3
-                , +daa.id + 7
-                , +daa.id + 8
-                , +daa.id + 9)
+        } else if ((+item.id - 1) === 9) {
+            imgPosition2(+item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 3
+                , +item.id + 7
+                , +item.id + 8
+                , +item.id + 9)
 
-        } else if (((+daa.id - 1) > 0) && ((+daa.id - 1) < 8)) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id + 1
-                , +daa.id + 8
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
+        } else if (((+item.id - 1) > 0) && ((+item.id - 1) < 8)) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id + 1
+                , +item.id + 8
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
 
-        } else if (((+daa.id - 1) % 10 === 0) && ((+daa.id - 1) > 0) && ((+daa.id - 1) < 90)) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id + 1
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 9
-                , +daa.id + 10
-                , +daa.id + 11)
+        } else if (((+item.id - 1) % 10 === 0) && ((+item.id - 1) > 0) && ((+item.id - 1) < 90)) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id + 1
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 9
+                , +item.id + 10
+                , +item.id + 11)
 
-        } else if (((+daa.id - 1) % 10 === 8) && ((+daa.id - 1) > 8) && ((+daa.id - 1) < 98)) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8)
-        } else if (((+daa.id - 1) % 10 === 9) && ((+daa.id - 1) > 9) && ((+daa.id - 1) < 99)) {
-            imgPosition2(+daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id + 9
-                , +daa.id + 8
-                , +daa.id + 7)
-        } else if ((+daa.id - 1) === 98) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10)
+        } else if (((+item.id - 1) % 10 === 8) && ((+item.id - 1) > 8) && ((+item.id - 1) < 98)) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8)
+        } else if (((+item.id - 1) % 10 === 9) && ((+item.id - 1) > 9) && ((+item.id - 1) < 99)) {
+            imgPosition2(+item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id + 9
+                , +item.id + 8
+                , +item.id + 7)
+        } else if ((+item.id - 1) === 98) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10)
 
-        } else if ((+daa.id - 1) === 99) {
-            imgPosition2(+daa.id - 2, +daa.id - 1)
-            positionNumber(+daa.id - 3
-                , +daa.id - 13
-                , +daa.id - 12
-                , +daa.id - 11)
+        } else if ((+item.id - 1) === 99) {
+            imgPosition2(+item.id - 2, +item.id - 1)
+            positionNumber(+item.id - 3
+                , +item.id - 13
+                , +item.id - 12
+                , +item.id - 11)
 
-        } else if (((+daa.id - 1) > 90) && ((+daa.id - 1) < 98)) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 1)
+        } else if (((+item.id - 1) > 90) && ((+item.id - 1) < 98)) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 1)
 
-        } else if ((+daa.id - 1) === 90) {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 1)
+        } else if ((+item.id - 1) === 90) {
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 1)
 
         } else {
-            imgPosition2(+daa.id - 1, +daa.id)
-            positionNumber(+daa.id - 2
-                , +daa.id - 12
-                , +daa.id - 11
-                , +daa.id - 10
-                , +daa.id - 9
-                , +daa.id + 1
-                , +daa.id + 11
-                , +daa.id + 10
-                , +daa.id + 9
-                , +daa.id + 8)
+            imgPosition2(+item.id - 1, +item.id)
+            positionNumber(+item.id - 2
+                , +item.id - 12
+                , +item.id - 11
+                , +item.id - 10
+                , +item.id - 9
+                , +item.id + 1
+                , +item.id + 11
+                , +item.id + 10
+                , +item.id + 9
+                , +item.id + 8)
         }
     }
 }
 
-function installShip1(daa) {
+function installShip1(item) {
     if (flagCoup === true) {
-        if ((+daa.id - 1) < 10) {
-            if ((+daa.id - 1) === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id
-                    , +daa.id + 9
-                    , +daa.id + 10)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 9)
+        if ((+item.id - 1) < 10) {
+            if ((+item.id - 1) === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id
+                    , +item.id + 9
+                    , +item.id + 10)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 2
+                    , +item.id + 8
+                    , +item.id + 9)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 9
-                    , +daa.id + 10)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 9
+                    , +item.id + 10)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 90)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 10
-                    , +daa.id - 11
-                    , +daa.id
-                    , +daa.id + 9
-                    , +daa.id + 10)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 12
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 9)
+        } else if (((+item.id - 1) > 9) && ((+item.id - 1) < 90)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 10
+                    , +item.id - 11
+                    , +item.id
+                    , +item.id + 9
+                    , +item.id + 10)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 11
+                    , +item.id - 12
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 9)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 9
-                    , +daa.id + 10)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 9
+                    , +item.id + 10)
             }
-        } else if (((+daa.id - 1) > 89) && ((+daa.id - 1) < 100)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 10
-                    , +daa.id - 11
-                    , +daa.id)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2)
+        } else if (((+item.id - 1) > 89) && ((+item.id - 1) < 100)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 10
+                    , +item.id - 11
+                    , +item.id)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id)
             }
         }
     } else {
-        if ((+daa.id - 1) < 10) {
-            if ((+daa.id - 1) === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id
-                    , +daa.id + 9
-                    , +daa.id + 10)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 9)
+        if ((+item.id - 1) < 10) {
+            if ((+item.id - 1) === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id
+                    , +item.id + 9
+                    , +item.id + 10)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 2
+                    , +item.id + 8
+                    , +item.id + 9)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 9
-                    , +daa.id + 10)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 9
+                    , +item.id + 10)
             }
-        } else if (((+daa.id - 1) > 9) && ((+daa.id - 1) < 90)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 10
-                    , +daa.id - 11
-                    , +daa.id
-                    , +daa.id + 9
-                    , +daa.id + 10)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 11
-                    , +daa.id - 12
-                    , +daa.id - 2
-                    , +daa.id + 8
-                    , +daa.id + 9)
+        } else if (((+item.id - 1) > 9) && ((+item.id - 1) < 90)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 10
+                    , +item.id - 11
+                    , +item.id
+                    , +item.id + 9
+                    , +item.id + 10)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 11
+                    , +item.id - 12
+                    , +item.id - 2
+                    , +item.id + 8
+                    , +item.id + 9)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id
-                    , +daa.id + 8
-                    , +daa.id + 9
-                    , +daa.id + 10)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id
+                    , +item.id + 8
+                    , +item.id + 9
+                    , +item.id + 10)
             }
-        } else if (((+daa.id - 1) > 89) && ((+daa.id - 1) < 100)) {
-            if ((+daa.id - 1) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 10
-                    , +daa.id - 11
-                    , +daa.id)
-            } else if ((+daa.id) % 10 === 0) {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 2)
+        } else if (((+item.id - 1) > 89) && ((+item.id - 1) < 100)) {
+            if ((+item.id - 1) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 10
+                    , +item.id - 11
+                    , +item.id)
+            } else if ((+item.id) % 10 === 0) {
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 2)
             } else {
-                imgPosition1(+daa.id - 1)
-                positionNumber(+daa.id - 12
-                    , +daa.id - 11
-                    , +daa.id - 10
-                    , +daa.id - 2
-                    , +daa.id)
+                imgPosition1(+item.id - 1)
+                positionNumber(+item.id - 12
+                    , +item.id - 11
+                    , +item.id - 10
+                    , +item.id - 2
+                    , +item.id)
             }
         }
     }
 }
 
 function shipFunc(y, z, x, c, v) {
-    elems[z].src = y
-    elems[x].src = y
-    elems[c].src = y
-    elems[v].src = y
+    element[z].src = y
+    element[x].src = y
+    element[c].src = y
+    element[v].src = y
 }
 
 function shipFuncIf(y, z, x, c) {
     if ((+arrSea[z] === 0) && (+arrSea[x] === 0) && (+arrSea[c] === 0)) {
-        elems[z].src = y
-        elems[x].src = y
-        elems[c].src = y
+        element[z].src = y
+        element[x].src = y
+        element[c].src = y
     }
 }
 
 function shipFuncIf2(y, z, x) {
     if ((+arrSea[z] === 0) && (+arrSea[x] === 0)) {
-        elems[z].src = y
-        elems[x].src = y
+        element[z].src = y
+        element[x].src = y
     }
 }
 
 function shipFuncIf1(y, z) {
-    if ((+arrSea[z] === 0)) elems[z].src = y
+    if ((+arrSea[z] === 0)) element[z].src = y
 }
 
-function instShipN (daa, a, b){
+function instShipN (item, a, b){
     counter += 1
-    a(daa)
+    a(item)
     shipImg(img.zp)
     b()
 }
 
-function installShip(daa) {
+function installShip(item) {
     if (counter === 0) {
-        instShipN (daa, installShip4, imgShipTable4)
-    } else if ((counter === 1 || counter === 2) && (+arrSea[+daa.id - 1] === 0)) {
+        instShipN (item, installShip4, imgShipTable4)
+    } else if ((counter === 1 || counter === 2) && (+arrSea[+item.id - 1] === 0)) {
         if (flagCoup === true) {
-            if ((+daa.id - 1) < 80) {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id + 19] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+            if ((+item.id - 1) < 80) {
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id + 9] === 0) && (+arrSea[+item.id + 19] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
-            } else if ((+daa.id - 1) < 90) {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0) && (+arrSea[+daa.id - 11] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+            } else if ((+item.id - 1) < 90) {
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id + 9] === 0) && (+arrSea[+item.id - 11] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
             } else {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0) && (+arrSea[+daa.id - 21] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id - 11] === 0) && (+arrSea[+item.id - 21] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
             }
         } else {
-            if ((+daa.id - 1) % 10 === 7) {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+            if ((+item.id - 1) % 10 === 7) {
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id] === 0) && (+arrSea[+item.id + 1] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
-            } else if ((+daa.id - 1) % 10 === 8) {
-                if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+            } else if ((+item.id - 1) % 10 === 8) {
+                if ((+arrSea[+item.id - 2] === 0) && (+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
-            } else if ((+daa.id - 1) % 10 === 9) {
-                if ((+arrSea[+daa.id - 3] === 0) && (+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+            } else if ((+item.id - 1) % 10 === 9) {
+                if ((+arrSea[+item.id - 3] === 0) && (+arrSea[+item.id - 2] === 0) && (+arrSea[+item.id - 1] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
             } else {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0) && (+arrSea[+daa.id + 1] === 0)) {
-                    instShipN (daa, installShip3, imgShipTable3)
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id] === 0) && (+arrSea[+item.id + 1] === 0)) {
+                    instShipN (item, installShip3, imgShipTable3)
                 }
             }
         }
-    } else if ((counter === 3 || counter === 4 || counter === 5) && (+arrSea[+daa.id - 1] === 0)) {
+    } else if ((counter === 3 || counter === 4 || counter === 5) && (+arrSea[+item.id - 1] === 0)) {
         if (flagCoup === true) {
-            if ((+daa.id - 1) < 90) {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id + 9] === 0)) {
-                    instShipN (daa, installShip2, imgShipTable2)
+            if ((+item.id - 1) < 90) {
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id + 9] === 0)) {
+                    instShipN (item, installShip2, imgShipTable2)
                 }
             } else {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id - 11] === 0)) {
-                    instShipN (daa, installShip2, imgShipTable2)
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id - 11] === 0)) {
+                    instShipN (item, installShip2, imgShipTable2)
                 }
             }
         } else {
-            if ((+daa.id - 1) % 10 === 9) {
-                if ((+arrSea[+daa.id - 2] === 0) && (+arrSea[+daa.id - 1] === 0)) {
-                    instShipN (daa, installShip2, imgShipTable2)
+            if ((+item.id - 1) % 10 === 9) {
+                if ((+arrSea[+item.id - 2] === 0) && (+arrSea[+item.id - 1] === 0)) {
+                    instShipN (item, installShip2, imgShipTable2)
                 }
             } else {
-                if ((+arrSea[+daa.id - 1] === 0) && (+arrSea[+daa.id] === 0)) {
-                    instShipN (daa, installShip2, imgShipTable2)
+                if ((+arrSea[+item.id - 1] === 0) && (+arrSea[+item.id] === 0)) {
+                    instShipN (item, installShip2, imgShipTable2)
                 }
             }
         }
-    } else if ((counter === 6 || counter === 7 || counter === 8 || counter === 9) && (+arrSea[+daa.id - 1] === 0)) {
+    } else if ((counter === 6 || counter === 7 || counter === 8 || counter === 9) && (+arrSea[+item.id - 1] === 0)) {
         if (flagCoup === true) {
-            instShipN (daa, installShip1, imgShipTable1)
+            instShipN (item, installShip1, imgShipTable1)
         } else {
-            instShipN (daa, installShip1, imgShipTable1)
+            instShipN (item, installShip1, imgShipTable1)
         }
 
     }
@@ -1749,7 +1749,7 @@ function restartInstall() {
     counter = 0;
     counterComp = 0;
     for (let i = 0; i < 100; i++) {
-        elems[i].src = img.z1;
+        element[i].src = img.z1;
         arrSea[i] = 0;
     }
 }
@@ -1767,13 +1767,13 @@ function playBattle2() {
 
 function imgReplaceP100 (i, n, img, arr) {
     if (arr[i] === n) {
-        elems[i + 100].src = img
+        element[i + 100].src = img
     }
 }
 
 function imgReplace (i, n, img, arr) {
     if (arr[i] === n) {
-        elems[i].src = img
+        element[i].src = img
     }
 }
 
@@ -1811,7 +1811,7 @@ function start() {
 
 function startAuto(field) {
     for (let i = 0; i < 100; i++) {
-        elems[i].src = img.z1;
+        element[i].src = img.z1;
         arrSea[i] = 0;
     }
     automation2(arrSea, imgPosition4AutoStart)
@@ -1843,45 +1843,45 @@ function startAuto(field) {
     counter = 10
     for (let i = 0; i < field.length; i++) {
         if (field[i] === 11) {
-            elems[i].src = img.v1
+            element[i].src = img.v1
         } else if (field[i] === 111) {
-            elems[i].src = img.g1
+            element[i].src = img.g1
         } else if (field[i] === 21) {
-            elems[i].src = img.v21
+            element[i].src = img.v21
         } else if (field[i] === 212) {
-            elems[i].src = img.g21
+            element[i].src = img.g21
         } else if (field[i] === 22) {
-            elems[i].src = img.v22
+            element[i].src = img.v22
         } else if (field[i] === 222) {
-            elems[i].src = img.g22
+            element[i].src = img.g22
         } else if (field[i] === 31) {
-            elems[i].src = img.v31
+            element[i].src = img.v31
         } else if (field[i] === 313) {
-            elems[i].src = img.g31
+            element[i].src = img.g31
         } else if (field[i] === 32) {
-            elems[i].src = img.v32
+            element[i].src = img.v32
         } else if (field[i] === 323) {
-            elems[i].src = img.g32
+            element[i].src = img.g32
         } else if (field[i] === 33) {
-            elems[i].src = img.v33
+            element[i].src = img.v33
         } else if (field[i] === 333) {
-            elems[i].src = img.g33
+            element[i].src = img.g33
         } else if (field[i] === 41) {
-            elems[i].src = img.v41
+            element[i].src = img.v41
         } else if (field[i] === 414) {
-            elems[i].src = img.g41
+            element[i].src = img.g41
         } else if (field[i] === 42) {
-            elems[i].src = img.v42
+            element[i].src = img.v42
         } else if (field[i] === 424) {
-            elems[i].src = img.g42
+            element[i].src = img.g42
         } else if (field[i] === 43) {
-            elems[i].src = img.v43
+            element[i].src = img.v43
         } else if (field[i] === 434) {
-            elems[i].src = img.g43
+            element[i].src = img.g43
         } else if (field[i] === 44) {
-            elems[i].src = img.v44
+            element[i].src = img.v44
         } else if (field[i] === 444) {
-            elems[i].src = img.g44
+            element[i].src = img.g44
         }
     }
 }
@@ -2810,7 +2810,7 @@ function missed(n, fire, flag) {
     orz = flag
     let arrowImg = document.getElementById('1000')
     arrowImg.src = "img/arrowRight.png"
-    elems[+n].src = img.zm
+    element[+n].src = img.zm
     mPole[+n] = 5
     arrBattle[+n] = 5
     setTimeout(fireShip, 500, fire)
@@ -2824,7 +2824,7 @@ function hit(n, fire, k) {
 
 function hit2(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    elems[+n].src = img.cross
+    element[+n].src = img.cross
     setTimeout(fireShip, 500, fire)
 }
 
@@ -2839,7 +2839,7 @@ function hit2X(n1, n2, fire) {
 
 function hit3X(n, fire, k) {
     arrBattle[n] = mPole[n] + k
-    elems[n].src = img.cross
+    element[n].src = img.cross
     counterFind3 += 1
     setTimeout(fireShip, 500, fire)
 }
@@ -2856,9 +2856,9 @@ function hit3XX(n1, n2, n3, fire, k) {
 }
 
 function hit4XX(n1, n2, n3, fire, k) {
-    elems[n1].src = img.cross
-    elems[n2].src = img.cross
-    elems[n3].src = img.cross
+    element[n1].src = img.cross
+    element[n2].src = img.cross
+    element[n3].src = img.cross
 
     arrBattle[n1] = +mPole[n1] + k
     arrBattle[n2] = +mPole[n2] + k
@@ -3382,6 +3382,8 @@ function find4X(number, fire) {
     }
 }
 
+
+
 function find4XX(fire) {
     if (flagFind !== 0) {
         if ((+arrBattle[tmp] === 41) || (+arrBattle[tmp] === 941)) {
@@ -3866,17 +3868,17 @@ function find4XXX(fire) {
 }
 
 function elArBaSea(cell) {
-    elems[cell].src = img.zm
+    element[cell].src = img.zm
     arrSeaComp[cell - 100] = 5
 }
 
 function BaSea1(i) {
     counterI += 1
     if (+arrSeaComp[i] === 911) {
-        elems[i + 100].src = 'img/shipfire/z1_1f.gif'
+        element[i + 100].src = 'img/shipfire/z1_1f.gif'
         arrSeaComp[i] = 5
     } else if (+arrSeaComp[i] === 9111) {
-        elems[i + 100].src = 'img/ship2fire/z1_1cf.gif'
+        element[i + 100].src = 'img/ship2fire/z1_1cf.gif'
         arrSeaComp[i] = 5
     }
 }
@@ -3884,13 +3886,13 @@ function BaSea1(i) {
 function BaSea2(i) {
     counterI += 1
     if (+arrSeaComp[i] === 921) {
-        elems[i + 100].src = 'img/shipfire/z2_1f.gif'
-        elems[i + 110].src = 'img/shipfire/z2_2f.gif'
+        element[i + 100].src = 'img/shipfire/z2_1f.gif'
+        element[i + 110].src = 'img/shipfire/z2_2f.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
     } else if (+arrSeaComp[i] === 9212) {
-        elems[i + 100].src = 'img/ship2fire/z2_1cf.gif'
-        elems[i + 101].src = 'img/ship2fire/z2_2cf.gif'
+        element[i + 100].src = 'img/ship2fire/z2_1cf.gif'
+        element[i + 101].src = 'img/ship2fire/z2_2cf.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
     }
@@ -3899,16 +3901,16 @@ function BaSea2(i) {
 function BaSea3(i) {
     counterI += 1
     if (+arrSeaComp[i] === 931) {
-        elems[i + 100].src = 'img/shipfire/z3_1f.gif'
-        elems[i + 110].src = 'img/shipfire/z3_2f.gif'
-        elems[i + 120].src = 'img/shipfire/z3_3f.gif'
+        element[i + 100].src = 'img/shipfire/z3_1f.gif'
+        element[i + 110].src = 'img/shipfire/z3_2f.gif'
+        element[i + 120].src = 'img/shipfire/z3_3f.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
         arrSeaComp[i + 20] = 5
     } else if (+arrSeaComp[i] === 9313) {
-        elems[i + 100].src = 'img/ship2fire/z3_1cf.gif'
-        elems[i + 101].src = 'img/ship2fire/z3_2cf.gif'
-        elems[i + 102].src = 'img/ship2fire/z3_3cf.gif'
+        element[i + 100].src = 'img/ship2fire/z3_1cf.gif'
+        element[i + 101].src = 'img/ship2fire/z3_2cf.gif'
+        element[i + 102].src = 'img/ship2fire/z3_3cf.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
         arrSeaComp[i + 2] = 5
@@ -3919,19 +3921,19 @@ function BaSea3(i) {
 function BaSea4(i) {
     counterI += 1
     if (+arrSeaComp[i] === 941) {
-        elems[i + 100].src = 'img/shipfire/z4_1f.gif'
-        elems[i + 110].src = 'img/shipfire/z4_2f.gif'
-        elems[i + 120].src = 'img/shipfire/z4_3f.gif'
-        elems[i + 130].src = 'img/shipfire/z4_4f.gif'
+        element[i + 100].src = 'img/shipfire/z4_1f.gif'
+        element[i + 110].src = 'img/shipfire/z4_2f.gif'
+        element[i + 120].src = 'img/shipfire/z4_3f.gif'
+        element[i + 130].src = 'img/shipfire/z4_4f.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 10] = 5
         arrSeaComp[i + 20] = 5
         arrSeaComp[i + 30] = 5
     } else if (+arrSeaComp[i] === 9414) {
-        elems[i + 100].src = 'img/ship2fire/z4_1cf.gif'
-        elems[i + 101].src = 'img/ship2fire/z4_2cf.gif'
-        elems[i + 102].src = 'img/ship2fire/z4_3cf.gif'
-        elems[i + 103].src = 'img/ship2fire/z4_4cf.gif'
+        element[i + 100].src = 'img/ship2fire/z4_1cf.gif'
+        element[i + 101].src = 'img/ship2fire/z4_2cf.gif'
+        element[i + 102].src = 'img/ship2fire/z4_3cf.gif'
+        element[i + 103].src = 'img/ship2fire/z4_4cf.gif'
         arrSeaComp[i] = 5
         arrSeaComp[i + 1] = 5
         arrSeaComp[i + 2] = 5
@@ -4534,30 +4536,30 @@ function findBattle4My() {
 }
 
 function elArBa(cell) {
-    elems[cell].src = img.zm
+    element[cell].src = img.zm
     arrBattle[cell] = 5
 
 }
 
 function BaSea1Comp(i) {
     if (+arrBattle[i] === 911) {
-        elems[i].src = 'img/shipfire/z1_1f.gif'
+        element[i].src = 'img/shipfire/z1_1f.gif'
         arrBattle[i] = 5
     } else if (+arrBattle[i] === 9111) {
-        elems[i].src = 'img/ship2fire/z1_1cf.gif'
+        element[i].src = 'img/ship2fire/z1_1cf.gif'
         arrBattle[i] = 5
     }
 }
 
 function BaSea2Comp(i) {
     if (+arrBattle[i] === 921 || +arrBattle[i] === 21) {
-        elems[i].src = 'img/shipfire/z2_1f.gif'
-        elems[i + 10].src = 'img/shipfire/z2_2f.gif'
+        element[i].src = 'img/shipfire/z2_1f.gif'
+        element[i + 10].src = 'img/shipfire/z2_2f.gif'
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
     } else if (+arrBattle[i] === 9212 || +arrBattle[i] === 212) {
-        elems[i].src = 'img/ship2fire/z2_1cf.gif'
-        elems[i + 1].src = 'img/ship2fire/z2_2cf.gif'
+        element[i].src = 'img/ship2fire/z2_1cf.gif'
+        element[i + 1].src = 'img/ship2fire/z2_2cf.gif'
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
     }
@@ -4565,16 +4567,16 @@ function BaSea2Comp(i) {
 
 function BaSea3Comp(i) {
     if (+arrBattle[i] === 931) {
-        elems[i].src = 'img/shipfire/z3_1f.gif'
-        elems[i + 10].src = 'img/shipfire/z3_2f.gif'
-        elems[i + 20].src = 'img/shipfire/z3_3f.gif'
+        element[i].src = 'img/shipfire/z3_1f.gif'
+        element[i + 10].src = 'img/shipfire/z3_2f.gif'
+        element[i + 20].src = 'img/shipfire/z3_3f.gif'
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
         arrBattle[i + 20] = 5
     } else if (+arrBattle[i] === 9313) {
-        elems[i].src = 'img/ship2fire/z3_1cf.gif'
-        elems[i + 1].src = 'img/ship2fire/z3_2cf.gif'
-        elems[i + 2].src = 'img/ship2fire/z3_3cf.gif'
+        element[i].src = 'img/ship2fire/z3_1cf.gif'
+        element[i + 1].src = 'img/ship2fire/z3_2cf.gif'
+        element[i + 2].src = 'img/ship2fire/z3_3cf.gif'
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
         arrBattle[i + 2] = 5
@@ -4584,19 +4586,19 @@ function BaSea3Comp(i) {
 
 function baSea4Comp(i) {
     if (+arrBattle[i] === 941) {
-        elems[i].src = 'img/shipfire/z4_1f.gif'
-        elems[i + 10].src = 'img/shipfire/z4_2f.gif'
-        elems[i + 20].src = 'img/shipfire/z4_3f.gif'
-        elems[i + 30].src = 'img/shipfire/z4_4f.gif'
+        element[i].src = 'img/shipfire/z4_1f.gif'
+        element[i + 10].src = 'img/shipfire/z4_2f.gif'
+        element[i + 20].src = 'img/shipfire/z4_3f.gif'
+        element[i + 30].src = 'img/shipfire/z4_4f.gif'
         arrBattle[i] = 5
         arrBattle[i + 10] = 5
         arrBattle[i + 20] = 5
         arrBattle[i + 30] = 5
     } else if (+arrBattle[i] === 9414) {
-        elems[i].src = 'img/ship2fire/z4_1cf.gif'
-        elems[i + 1].src = 'img/ship2fire/z4_2cf.gif'
-        elems[i + 2].src = 'img/ship2fire/z4_3cf.gif'
-        elems[i + 3].src = 'img/ship2fire/z4_4cf.gif'
+        element[i].src = 'img/ship2fire/z4_1cf.gif'
+        element[i + 1].src = 'img/ship2fire/z4_2cf.gif'
+        element[i + 2].src = 'img/ship2fire/z4_3cf.gif'
+        element[i + 3].src = 'img/ship2fire/z4_4cf.gif'
         arrBattle[i] = 5
         arrBattle[i + 1] = 5
         arrBattle[i + 2] = 5
